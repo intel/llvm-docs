@@ -1,0 +1,4 @@
+var classsycl_1_1__V1_1_1detail_1_1ReductionIdentityContainer_3_01T_00_01BinaryOperation_00_01false_fcc3ac0f9e45cbddff142d1ea2d4278e =
+[
+    [ "has_identity", "classsycl_1_1__V1_1_1detail_1_1ReductionIdentityContainer_3_01T_00_01BinaryOperation_00_01false_fcc3ac0f9e45cbddff142d1ea2d4278e.html#a7b56743a1a4bf94499bf70c25c5cea35", null ]
+];

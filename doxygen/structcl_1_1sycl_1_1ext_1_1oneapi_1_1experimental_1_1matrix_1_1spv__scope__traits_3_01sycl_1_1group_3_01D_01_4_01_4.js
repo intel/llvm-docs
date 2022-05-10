@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1spv__scope__traits_3_01sycl_1_1group_3_01D_01_4_01_4 =
-[
-    [ "value", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1spv__scope__traits_3_01sycl_1_1group_3_01D_01_4_01_4.html#a3fec942cdf98c599dd9578e98cdbc81c", null ]
-];

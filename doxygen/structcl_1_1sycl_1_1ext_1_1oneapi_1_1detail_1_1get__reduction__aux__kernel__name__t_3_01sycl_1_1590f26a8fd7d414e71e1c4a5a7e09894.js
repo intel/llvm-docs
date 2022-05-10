@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1get__reduction__aux__kernel__name__t_3_01sycl_1_1590f26a8fd7d414e71e1c4a5a7e09894 =
-[
-    [ "name", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1get__reduction__aux__kernel__name__t_3_01sycl_1_1590f26a8fd7d414e71e1c4a5a7e09894.html#af33944fbb162995b14342c4e7e6898e7", null ]
-];

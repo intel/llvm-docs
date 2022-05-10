@@ -1,5 +1,0 @@
-var structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ExtractProperties_3_01std_1_1tupla0183cd2880cf860742eaee1393b4eb6 =
-[
-    [ "ExtractedPropertiesT", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ExtractProperties_3_01std_1_1tupla0183cd2880cf860742eaee1393b4eb6.html#af78c7527921cea8a3d50e54d5a0aeff0", null ],
-    [ "Extract", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ExtractProperties_3_01std_1_1tupla0183cd2880cf860742eaee1393b4eb6.html#aa7cffa1b14b4227b158f66851214d36c", null ]
-];

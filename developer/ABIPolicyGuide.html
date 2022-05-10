@@ -1,18 +1,16 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>ABI Policy Guide &#8212; oneAPI DPC++ Compiler  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=e491ac2d" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Contributing to DPC++" href="ContributeToDPCPP.html" />
@@ -36,10 +34,10 @@
       <div class="content" role="main">
         
         
-  <section class="tex2jax_ignore mathjax_ignore" id="abi-policy-guide">
-<h1>ABI Policy Guide<a class="headerlink" href="#abi-policy-guide" title="Permalink to this headline">¶</a></h1>
+  <section id="abi-policy-guide">
+<h1>ABI Policy Guide<a class="headerlink" href="#abi-policy-guide" title="Link to this heading">¶</a></h1>
 <section id="intro">
-<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
+<h2>Intro<a class="headerlink" href="#intro" title="Link to this heading">¶</a></h2>
 <p>Application Binary Interface is a contract between binary modules, that defines
 how structures and routines are accessed in machine code. Changing the ABI may
 break backwards compatibility of user application with the DPC++ runtime library
@@ -54,7 +52,7 @@ change means that the forward compatibility is broken (i.e. the old library
 can be replaced with newer version, but not vice versa).</p>
 <p>The following non-exhaustive list contains changes that are considered to be
 breaking:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Changing the size of exported symbol (for example, adding new member field
 to the exported class).</p></li>
 <li><p>Removing the exported symbol (that includes both changing the signature of
@@ -67,20 +65,17 @@ members).</p></li>
 <p>Adding a new exported symbol is considered to be non-breaking change.</p>
 </section>
 <section id="abi-versioning-policy">
-<h2>ABI Versioning Policy<a class="headerlink" href="#abi-versioning-policy" title="Permalink to this headline">¶</a></h2>
+<h2>ABI Versioning Policy<a class="headerlink" href="#abi-versioning-policy" title="Link to this heading">¶</a></h2>
 <p>The release version of the DPC++ runtime library follows
 <a class="reference external" href="https://semver.org/">Semantic Versioning</a> scheme: <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR.PATCH</span></code>. <code class="docutils literal notranslate"><span class="pre">MAJOR</span></code>
 version indicates breaking change. Version <code class="docutils literal notranslate"><span class="pre">X</span></code> is backwards incompatible with
-version <code class="docutils literal notranslate"><span class="pre">X-1</span></code>. <code class="docutils literal notranslate"><span class="pre">MINOR</span></code> indicates a non-breaking change. The development version
-of the library has a postfix <code class="docutils literal notranslate"><span class="pre">-V</span></code> that indicates breaking changes between
-releases. Every time a pull request introduces a breaking change, it must also
-uplift <code class="docutils literal notranslate"><span class="pre">V</span></code>. It is pull request author responsibility to accordingly update
-<code class="docutils literal notranslate"><span class="pre">V</span></code> part of library version. If <code class="docutils literal notranslate"><span class="pre">V</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> on release date, then <code class="docutils literal notranslate"><span class="pre">MAJOR_VERSION</span></code>
-is uplifted and <code class="docutils literal notranslate"><span class="pre">V</span></code> is set to zero. <code class="docutils literal notranslate"><span class="pre">MAJOR</span></code>, <code class="docutils literal notranslate"><span class="pre">MINOR</span></code>, and <code class="docutils literal notranslate"><span class="pre">PATCH</span></code> versions are
-not updated between releases.</p>
+version <code class="docutils literal notranslate"><span class="pre">X-1</span></code>. <code class="docutils literal notranslate"><span class="pre">MINOR</span></code> indicates a non-breaking change. We bump the versions
+immediately after the previous release had been branched off. As such, if next
+release is allowed/expected to be ABI-breaking we bump <code class="docutils literal notranslate"><span class="pre">MAJOR</span></code> and drop <code class="docutils literal notranslate"><span class="pre">MINOR</span></code>
+to zero otherwise increment <code class="docutils literal notranslate"><span class="pre">MINOR</span></code> in the beginning of the development cycles.</p>
 </section>
 <section id="sycl-export-macro">
-<h2><code class="docutils literal notranslate"><span class="pre">__SYCL_EXPORT</span></code> Macro<a class="headerlink" href="#sycl-export-macro" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">__SYCL_EXPORT</span></code> Macro<a class="headerlink" href="#sycl-export-macro" title="Link to this heading">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">__SYCL_EXPORT</span></code> provides facilities for fine-grained control over exported
 symbols. Mark symbols that are supposed to be accessible by the user and that
 are implemented in the SYCL Runtime library with this macro. Template
@@ -118,7 +113,7 @@ is accessible by the user (buffer and image inherit from this class).</p></li>
 </ul>
 </section>
 <section id="automated-abi-changes-testing">
-<h2>Automated ABI Changes Testing<a class="headerlink" href="#automated-abi-changes-testing" title="Permalink to this headline">¶</a></h2>
+<h2>Automated ABI Changes Testing<a class="headerlink" href="#automated-abi-changes-testing" title="Link to this heading">¶</a></h2>
 <blockquote>
 <div><p>The automated tests deal with the most commonly occurring problems, but they
 may not catch some corner cases. If you believe your PR breaks ABI, but the
@@ -131,7 +126,7 @@ If you add a new symbol, it is considered non-breaking change. When the test
 reports missing symbols, it means you have either changed or remove some of
 existing API methods. In both cases you need to adjust the dump file. You
 can do it either manually, or by invoking the following command:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3 sycl/tools/abi_check.py --mode dump_symbols --output path/to/output.dump path/to/sycl.so<span class="o">(</span>.dll<span class="o">)</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>sycl/tools/abi_check.py<span class="w"> </span>--mode<span class="w"> </span>dump_symbols<span class="w"> </span>--output<span class="w"> </span>path/to/output.dump<span class="w"> </span>path/to/sycl.so<span class="o">(</span>.dll<span class="o">)</span>
 </pre></div>
 </div>
 <p>Please, prefer updating the test files with the above command. The checker
@@ -146,33 +141,20 @@ breaking change.</p></li>
 </ul>
 </section>
 <section id="changing-abi">
-<h2>Changing ABI<a class="headerlink" href="#changing-abi" title="Permalink to this headline">¶</a></h2>
-<p><strong>Note (October, 2020)</strong>: DPC++ runtime and compiler ABI is currently in frozen
-state. This means that no ABI-breaking changes will be accepted by default.
-Project maintainers may still approve breaking changes in some cases. Please,
-try to avoid any breaking changes until freeze is lifted. If you need to change
-existing functionality, consider adding new APIs instead of replacing them.
-Also, please, avoid any changes, mentioned in the <a class="reference external" href="#intro">Intro</a> section as
-breaking. Refer to the above guide to distinguish breaking and non-breaking
-changes. If not sure, do not hesitate to ask code owners for help.</p>
-<p>Whenever you need to change the existing ABI, please, follow these steps:</p>
-<ol class="simple">
-<li><p>Adjust you PR description to reflect (non-)breaking ABI changes. Make sure
-it is clear, why breaking ABI is necessary.</p></li>
-<li><p>Fix failing ABI tests in your Pull Request. Use aforementioned techniques to
-update test files.</p></li>
-<li><p>~~If Pull Request introduces a breaking change, update the library version~~
-~~according to the policies.~~ <strong>(See note above)</strong></p></li>
-</ol>
+<h2>Changing ABI<a class="headerlink" href="#changing-abi" title="Link to this heading">¶</a></h2>
+<p>Generally DPC++ runtime and compiler ABI is frozen and ABI-breaking changes are
+not accepted by default since Oct 2020. Please try to avoid making any breaking
+changes. If you need to change existing functionality, consider adding new APIs
+instead of replacing existing APIs. Also, please, avoid any changes, mentioned in the
+<a class="reference internal" href="#intro">Intro</a> section as breaking. Refer to the above guide to distinguish
+between breaking and non-breaking changes. If unsure, do not hesitate to ask code
+owners for help.</p>
+<p><strong>Note</strong>: Features clearly marked as experimental are considered as an exception
+to this guideline.</p>
+<section id="abi-breaking-changes-window-april-18-july-11-2023-closed">
+<h3>ABI breaking changes window April 18 - July 11 2023 [CLOSED]<a class="headerlink" href="#abi-breaking-changes-window-april-18-july-11-2023-closed" title="Link to this heading">¶</a></h3>
+<p>Next ABI breaking changes window is tenatively April 2024.</p>
 </section>
-<section id="bkms-on-avoiding-changing-abi">
-<h2>BKMs on avoiding changing ABI<a class="headerlink" href="#bkms-on-avoiding-changing-abi" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>If there is a need to add a new field in <code class="docutils literal notranslate"><span class="pre">sycl::handler</span></code> or/and
-<code class="docutils literal notranslate"><span class="pre">sycl::detail::CG</span></code> classes it can be done without breaking ABI using the
-approach described in the comment at the beggining of
-<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/developer/../../include/CL/sycl/detail/cg.hpp"><span class="xref myst">cg.hpp</span></a></p></li>
-</ol>
 </section>
 </section>
 
@@ -191,8 +173,8 @@ approach described in the comment at the beggining of
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2022, Intel Corporation.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

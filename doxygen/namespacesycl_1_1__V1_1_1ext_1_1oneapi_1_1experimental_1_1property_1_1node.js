@@ -1,0 +1,5 @@
+var namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property_1_1node =
+[
+    [ "depends_on", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property_1_1node_1_1depends__on.html", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property_1_1node_1_1depends__on" ],
+    [ "depends_on_all_leaves", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property_1_1node_1_1depends__on__all__leaves.html", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property_1_1node_1_1depends__on__all__leaves" ]
+];

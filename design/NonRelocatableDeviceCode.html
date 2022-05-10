@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Non-Relocatable Device Code &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=e491ac2d" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Implementation design for sycl::any_device_has and sycl::all_devices_have" href="DeviceAspectTraitDesign.html" />
+    <link rel="prev" title="User driven Kernel Fusion" href="KernelFusionJIT.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Non-Relocatable Device Code</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="KernelFusionJIT.html">User driven Kernel Fusion</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="DeviceAspectTraitDesign.html">Implementation design for <code class="docutils literal notranslate"><span class="pre">sycl::any_device_has</span></code> and <code class="docutils literal notranslate"><span class="pre">sycl::all_devices_have</span></code></a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="non-relocatable-device-code">
+<h1>Non-Relocatable Device Code<a class="headerlink" href="#non-relocatable-device-code" title="Link to this heading">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
+<p>By default, SYCL allows device code to be relocatable, where function calls outside
+of the current translation unit are allowed using the <code class="docutils literal notranslate"><span class="pre">SYCL_EXTERNAL</span></code> attribute.
+To implement this, the compiler linkes all device code together, resolving all
+dependencies during the device linking process. This results in one large LLVM
+module that subsequent steps of device linking use. For more information,
+see <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/doc/design/CompilerAndRuntimeDesign.md">Compiler And Runtime Design</a>.</p>
+<p>The tradeoff with this apporach is that having a single module may increase
+memory usage or run time of the compiler.</p>
+<p>In the case where device code does not have any <code class="docutils literal notranslate"><span class="pre">SYCL_EXTERNAL</span></code> functions,
+the <code class="docutils literal notranslate"><span class="pre">-fno-sycl-rdc</span></code> flag may be useful. With this flag specified, the compiler
+will not link all device code into one large module. Instead, it will link
+device code on a per-translation-unit basis,
+which may improve runtime and memory usage of the compiler.</p>
+</section>
+<section id="device-code-linking-with-source-files">
+<h2>Device code linking with source files<a class="headerlink" href="#device-code-linking-with-source-files" title="Link to this heading">¶</a></h2>
+<p>Let’s take an example where the device linker has two input files:
+a.o and b.o, both containing device code. In this case,
+the device linking flow will look like the following:
+<img alt="No-RDC Device object file link flows" src="../_images/NoRDCFatObject.svg" />
+Diagram 1. No-RDC Device object file link flows.</p>
+<p>Device code is not linked together,
+and is processed seperately by the device linking backend</p>
+</section>
+<section id="device-code-linking-with-fat-static-archives">
+<h2>Device code linking with fat static archives<a class="headerlink" href="#device-code-linking-with-fat-static-archives" title="Link to this heading">¶</a></h2>
+<p>Next, let’s consider the case where the device compiler has a single input file,
+a fat static archive which itself contains a.o and b.o,
+both containing device code.
+In this case, the device linking flow will look like the following:
+<img alt="No-RDC Device fat static archive link flows" src="../_images/NoRDCFatArchive.svg" /></p>
+<p>Diagram 2. No-RDC Device fat static archive link flows.</p>
+<p>Each object file inside the static archive is processed seperately.
+<code class="docutils literal notranslate"><span class="pre">llvm-foreach</span></code> calls <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> once per object file. Since <code class="docutils literal notranslate"><span class="pre">llvm-spirv</span></code>
+is only called once per compiler input, here only once for the static archive,
+its input needs to be a single <code class="docutils literal notranslate"><span class="pre">TY_tempfilelist</span></code> containing
+all modules. Since <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> can output multiple modules per-run and
+it is called multiple times, the output of <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> is actually a
+<code class="docutils literal notranslate"><span class="pre">TY_tempfilelist</span></code> where each entry is the path to another <code class="docutils literal notranslate"><span class="pre">TY_tempfilelist</span></code>.
+A <code class="docutils literal notranslate"><span class="pre">file-table-tform</span></code> merge option is run to create the desired input</p>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="KernelFusionJIT.html">User driven Kernel Fusion</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="DeviceAspectTraitDesign.html">Implementation design for <code class="docutils literal notranslate"><span class="pre">sycl::any_device_has</span></code> and <code class="docutils literal notranslate"><span class="pre">sycl::all_devices_have</span></code></a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

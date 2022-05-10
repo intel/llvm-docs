@@ -1,0 +1,24 @@
+var backend__traits__hip_8hpp =
+[
+    [ "interop< backend::ext_oneapi_hip, context >", "structsycl_1_1__V1_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__hip_00_01context_01_4.html", "structsycl_1_1__V1_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__hip_00_01context_01_4" ],
+    [ "interop< backend::ext_oneapi_hip, device >", "structsycl_1_1__V1_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__hip_00_01device_01_4.html", "structsycl_1_1__V1_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__hip_00_01device_01_4" ],
+    [ "interop< backend::ext_oneapi_hip, event >", "structsycl_1_1__V1_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__hip_00_01event_01_4.html", "structsycl_1_1__V1_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__hip_00_01event_01_4" ],
+    [ "interop< backend::ext_oneapi_hip, queue >", "structsycl_1_1__V1_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__hip_00_01queue_01_4.html", "structsycl_1_1__V1_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__hip_00_01queue_01_4" ],
+    [ "BackendInput< backend::ext_oneapi_hip, buffer< DataT, Dimensions, AllocatorT > >", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__hip_00_01buffer_3_01Dat515b532395f0a892f3ef60a5b40f8f6d.html", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__hip_00_01buffer_3_01Dat515b532395f0a892f3ef60a5b40f8f6d" ],
+    [ "BackendReturn< backend::ext_oneapi_hip, buffer< DataT, Dimensions, AllocatorT > >", "structsycl_1_1__V1_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__hip_00_01buffer_3_01Da2e661f67dd1162f844ddbe6940eb3508.html", "structsycl_1_1__V1_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__hip_00_01buffer_3_01Da2e661f67dd1162f844ddbe6940eb3508" ],
+    [ "BackendInput< backend::ext_oneapi_hip, context >", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__hip_00_01context_01_4.html", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__hip_00_01context_01_4" ],
+    [ "BackendReturn< backend::ext_oneapi_hip, context >", "structsycl_1_1__V1_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__hip_00_01context_01_4.html", "structsycl_1_1__V1_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__hip_00_01context_01_4" ],
+    [ "BackendInput< backend::ext_oneapi_hip, device >", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__hip_00_01device_01_4.html", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__hip_00_01device_01_4" ],
+    [ "BackendReturn< backend::ext_oneapi_hip, device >", "structsycl_1_1__V1_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__hip_00_01device_01_4.html", "structsycl_1_1__V1_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__hip_00_01device_01_4" ],
+    [ "BackendInput< backend::ext_oneapi_hip, event >", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__hip_00_01event_01_4.html", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__hip_00_01event_01_4" ],
+    [ "BackendReturn< backend::ext_oneapi_hip, event >", "structsycl_1_1__V1_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__hip_00_01event_01_4.html", "structsycl_1_1__V1_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__hip_00_01event_01_4" ],
+    [ "BackendInput< backend::ext_oneapi_hip, queue >", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__hip_00_01queue_01_4.html", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__hip_00_01queue_01_4" ],
+    [ "BackendReturn< backend::ext_oneapi_hip, queue >", "structsycl_1_1__V1_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__hip_00_01queue_01_4.html", "structsycl_1_1__V1_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__hip_00_01queue_01_4" ],
+    [ "InteropFeatureSupportMap< backend::ext_oneapi_hip >", "structsycl_1_1__V1_1_1detail_1_1InteropFeatureSupportMap_3_01backend_1_1ext__oneapi__hip_01_4.html", "structsycl_1_1__V1_1_1detail_1_1InteropFeatureSupportMap_3_01backend_1_1ext__oneapi__hip_01_4" ],
+    [ "HIPcontext", "backend__traits__hip_8hpp.html#ad57eda3f4bafca66c367af3d63c407aa", null ],
+    [ "HIPdevice", "backend__traits__hip_8hpp.html#ad58cc234129ea1bef7cf2956be6c6b4e", null ],
+    [ "HIPdeviceptr", "backend__traits__hip_8hpp.html#ad0669110e478392bb4da7eb9adfea7ce", null ],
+    [ "HIPevent", "backend__traits__hip_8hpp.html#a020f2560d7ce61b38e2cc788e9542f51", null ],
+    [ "HIPmodule", "backend__traits__hip_8hpp.html#a8535a82ad6ed0bc56f49120405adb283", null ],
+    [ "HIPstream", "backend__traits__hip_8hpp.html#a8fbeb5e360cd9521296d2e1b24a84dc5", null ]
+];

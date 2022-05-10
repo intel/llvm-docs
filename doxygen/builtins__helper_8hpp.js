@@ -1,7 +1,7 @@
 var builtins__helper_8hpp =
 [
-    [ "helper", "structcl_1_1____host__std_1_1detail_1_1helper.html", "structcl_1_1____host__std_1_1detail_1_1helper" ],
-    [ "helper< 0 >", "structcl_1_1____host__std_1_1detail_1_1helper_3_010_01_4.html", "structcl_1_1____host__std_1_1detail_1_1helper_3_010_01_4" ],
+    [ "helper", "struct____host__std_1_1detail_1_1helper.html", "struct____host__std_1_1detail_1_1helper" ],
+    [ "helper< 0 >", "struct____host__std_1_1detail_1_1helper_3_010_01_4.html", "struct____host__std_1_1detail_1_1helper_3_010_01_4" ],
     [ "__MAKE_1V", "builtins__helper_8hpp.html#a06909195431933123187d303ee390cc4", null ],
     [ "__MAKE_1V_2P", "builtins__helper_8hpp.html#a5ae1bd40ef34828726eeb0994d30ed97", null ],
     [ "__MAKE_1V_2S", "builtins__helper_8hpp.html#a2b9fd606b9367f2b5f0f9fd74657b5c5", null ],

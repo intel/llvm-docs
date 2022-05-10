@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1detail_1_1nan__types_3_01T_00_01std_1_1enable__if__t_3_01is__contained__v_7f209441b8c7597c28ba7316c0eeadf3 =
+[
+    [ "arg_type", "structsycl_1_1__V1_1_1detail_1_1nan__types_3_01T_00_01std_1_1enable__if__t_3_01is__contained__v_7f209441b8c7597c28ba7316c0eeadf3.html#a60e2254d5d8d5de5fc3781a125ad1679", null ],
+    [ "ret_type", "structsycl_1_1__V1_1_1detail_1_1nan__types_3_01T_00_01std_1_1enable__if__t_3_01is__contained__v_7f209441b8c7597c28ba7316c0eeadf3.html#a3f9cf25429a5d5c39df53fe68ee1df22", null ]
+];

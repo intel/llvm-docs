@@ -1,0 +1,27 @@
+var detail_2builtins_8hpp =
+[
+    [ "__FUNC_PREFIX_CORE", "detail_2builtins_8hpp.html#aa385e76f8cf9e2f0ac50f50f04ad3a25", null ],
+    [ "__FUNC_PREFIX_OCL", "detail_2builtins_8hpp.html#a3e48e2d0e9a2cad50179c234cc5cdbf3", null ],
+    [ "__NOEXC", "detail_2builtins_8hpp.html#a5f84d521704034bf681ed4b0d5f3650c", null ],
+    [ "__SYCL_EXTERN_IT1", "detail_2builtins_8hpp.html#af77bcf0d2036d8ee6c63bf2472e87e76", null ],
+    [ "__SYCL_EXTERN_IT2", "detail_2builtins_8hpp.html#ae7045db69487ce252e7d9167e2878444", null ],
+    [ "__SYCL_EXTERN_IT2_SAME", "detail_2builtins_8hpp.html#a8c191785af3486bf84ceed23860f7184", null ],
+    [ "__SYCL_EXTERN_IT3", "detail_2builtins_8hpp.html#a64bccb49cf4076c25437be2e11cd6be7", null ],
+    [ "__SYCL_MAKE_CALL_ARG1", "detail_2builtins_8hpp.html#a136e81fac14ded11dd827514b0a06b56", null ],
+    [ "__SYCL_MAKE_CALL_ARG2", "detail_2builtins_8hpp.html#a9b59dcd670fa5d1905f9592e60db7fca", null ],
+    [ "__SYCL_MAKE_CALL_ARG2_SAME", "detail_2builtins_8hpp.html#a106ccac7a018c77d6cd894e6e1f4b8a5", null ],
+    [ "__SYCL_MAKE_CALL_ARG2_SAME_RESULT", "detail_2builtins_8hpp.html#af7c5680033964e33c3e127997a9df281", null ],
+    [ "__SYCL_MAKE_CALL_ARG3", "detail_2builtins_8hpp.html#ab98d809db6a4df6d40c977f4faa45105", null ],
+    [ "__SYCL_PPCAT", "detail_2builtins_8hpp.html#aa39e7e212e1c6f1aab65ccc5fc1da50c", null ],
+    [ "__SYCL_PPCAT_NX", "detail_2builtins_8hpp.html#ad4b58a3f20d8503373f992d5ae521f3f", null ],
+    [ "__SYCL_MAKE_CALL_ARG1", "detail_2builtins_8hpp.html#a30a2504364717915a2bd1fc3726fa5c9", null ],
+    [ "__SYCL_MAKE_CALL_ARG1", "detail_2builtins_8hpp.html#a6a86565d0fa9aa238410e943afaaca2e", null ],
+    [ "__SYCL_MAKE_CALL_ARG1", "detail_2builtins_8hpp.html#ad11df1e40dabc41a8111ae300a32f7be", null ],
+    [ "__SYCL_MAKE_CALL_ARG1", "detail_2builtins_8hpp.html#a701a22f75e7af81b7b7816b128a2a51a", null ],
+    [ "__SYCL_MAKE_CALL_ARG2_SAME", "detail_2builtins_8hpp.html#adc892aee87e4a65393e599f202bf7d9e", null ],
+    [ "__SYCL_MAKE_CALL_ARG2_SAME", "detail_2builtins_8hpp.html#a81bf5262673baad5880870d004126fbf", null ],
+    [ "__SYCL_MAKE_CALL_ARG2_SAME", "detail_2builtins_8hpp.html#ac85dcf679fee40da763ee9493bb6ca45", null ],
+    [ "__SYCL_MAKE_CALL_ARG2_SAME", "detail_2builtins_8hpp.html#ac5c01e637eb1ed6583001242d35183cd", null ],
+    [ "__SYCL_MAKE_CALL_ARG2_SAME", "detail_2builtins_8hpp.html#aaebd2b3c36471d8537536d9fa8488ddd", null ],
+    [ "__SYCL_MAKE_CALL_ARG2_SAME", "detail_2builtins_8hpp.html#af047f875c832083c69b4d60a9b8afb24", null ]
+];

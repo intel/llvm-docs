@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01work__group__size__hidd28e56e9bcd4e605e0b8410ecfe8987 =
+[
+    [ "key_t", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01work__group__size__hidd28e56e9bcd4e605e0b8410ecfe8987.html#a1e0cbea2415fadf59bbf38984e4f4350", null ],
+    [ "operator[]", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01work__group__size__hidd28e56e9bcd4e605e0b8410ecfe8987.html#a05b05d27fa804d850a661d141934f639", null ]
+];

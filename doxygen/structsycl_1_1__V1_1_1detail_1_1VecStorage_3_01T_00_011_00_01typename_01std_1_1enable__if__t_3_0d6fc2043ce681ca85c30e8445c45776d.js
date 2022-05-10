@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1VecStorage_3_01T_00_011_00_01typename_01std_1_1enable__if__t_3_0d6fc2043ce681ca85c30e8445c45776d =
+[
+    [ "DataType", "structsycl_1_1__V1_1_1detail_1_1VecStorage_3_01T_00_011_00_01typename_01std_1_1enable__if__t_3_0d6fc2043ce681ca85c30e8445c45776d.html#a71d07504d24734849427f641cb39baa3", null ]
+];

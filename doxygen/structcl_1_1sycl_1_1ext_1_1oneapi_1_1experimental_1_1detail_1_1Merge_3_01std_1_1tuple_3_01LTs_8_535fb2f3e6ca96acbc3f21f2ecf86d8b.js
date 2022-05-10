@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1Merge_3_01std_1_1tuple_3_01LTs_8_535fb2f3e6ca96acbc3f21f2ecf86d8b =
-[
-    [ "type", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1Merge_3_01std_1_1tuple_3_01LTs_8_535fb2f3e6ca96acbc3f21f2ecf86d8b.html#a865f90e2e9f2c3f7f860869bfc307d7e", null ]
-];

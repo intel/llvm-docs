@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ExtractProperties_3_01std_1_1tu33f9e354e3d713a7d4b8832b82197dca =
+[
+    [ "ExtractedPropertiesT", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ExtractProperties_3_01std_1_1tu33f9e354e3d713a7d4b8832b82197dca.html#a41005bf67e60beda3197d7f55b5024b9", null ],
+    [ "Extract", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ExtractProperties_3_01std_1_1tu33f9e354e3d713a7d4b8832b82197dca.html#a4e1b8f8357ac1c5c6259612f6135e4c0", null ]
+];

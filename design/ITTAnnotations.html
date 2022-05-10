@@ -1,18 +1,16 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>ITT annotations support &#8212; oneAPI DPC++ Compiler  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=e491ac2d" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Implementation design for “device_global”" href="DeviceGlobal.html" />
@@ -36,21 +34,21 @@
       <div class="content" role="main">
         
         
-  <section class="tex2jax_ignore mathjax_ignore" id="itt-annotations-support">
-<h1>ITT annotations support<a class="headerlink" href="#itt-annotations-support" title="Permalink to this headline">¶</a></h1>
+  <section id="itt-annotations-support">
+<h1>ITT annotations support<a class="headerlink" href="#itt-annotations-support" title="Link to this heading">¶</a></h1>
 <p>This extension enables a set of functions implementing
 the Instrumentation and Tracing Technology (ITT) functionality
 in SYCL device code.</p>
 <p>There are three sets of functions defined by this extension,
 and they serve different purposes.</p>
 <section id="user-apis">
-<h2>User APIs<a class="headerlink" href="#user-apis" title="Permalink to this headline">¶</a></h2>
+<h2>User APIs<a class="headerlink" href="#user-apis" title="Link to this heading">¶</a></h2>
 <p>The user code calling these functions must include the corresponding header
 file(s) provided by <code class="docutils literal notranslate"><span class="pre">ittnotify</span></code> project (TBD: reference ITT repo here).</p>
 <p>These functions are named using <code class="docutils literal notranslate"><span class="pre">__itt_notify_</span></code> prefix.</p>
 </section>
 <section id="stub-apis">
-<h2>Stub APIs<a class="headerlink" href="#stub-apis" title="Permalink to this headline">¶</a></h2>
+<h2>Stub APIs<a class="headerlink" href="#stub-apis" title="Link to this heading">¶</a></h2>
 <p>These functions are not defined in any header file, and their declarations
 follow exactly the declarations of the corresponding user APIs, except that
 they have an extra <code class="docutils literal notranslate"><span class="pre">_stub</span></code> suffix in their names.</p>
@@ -63,23 +61,23 @@ in the execution trace. This is just one way for implementing them,
 and the actual implementation may change in future.</p>
 </section>
 <section id="compiler-wrapper-apis">
-<h2>Compiler wrapper APIs<a class="headerlink" href="#compiler-wrapper-apis" title="Permalink to this headline">¶</a></h2>
+<h2>Compiler wrapper APIs<a class="headerlink" href="#compiler-wrapper-apis" title="Link to this heading">¶</a></h2>
 <p>These functions are not defined in any header file, and they are supposed
 to be called from the compiler generated code. These thin wrappers
 just provide a convenient way for compilers to produce ITT annotations
 without generating too much code in the compilers’ IR.</p>
 <p>These functions have <code class="docutils literal notranslate"><span class="pre">_wrapper</span></code> suffix in their names.</p>
 <p><strong>Example</strong></p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">DEVICE_EXTERN_C</span> <span class="kt">void</span> <span class="nf">__itt_offload_wi_start_stub</span><span class="p">(</span>
- <span class="kt">size_t</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="kt">size_t</span><span class="p">,</span> <span class="kt">uint32_t</span><span class="p">);</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">DEVICE_EXTERN_C</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">__itt_offload_wi_start_stub</span><span class="p">(</span>
+<span class="w"> </span><span class="kt">size_t</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="kt">size_t</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="p">);</span>
 
-<span class="n">DEVICE_EXTERN_C</span> <span class="kt">void</span> <span class="nf">__itt_offload_wi_start_wrapper</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="mh">0xFF747469</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
-    <span class="kt">size_t</span> <span class="n">GroupID</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">...;</span>
-    <span class="kt">size_t</span> <span class="n">WIId</span> <span class="o">=</span> <span class="p">...;</span>
-    <span class="kt">uint32_t</span> <span class="n">WGSize</span> <span class="o">=</span> <span class="p">...;</span>
-    <span class="n">__itt_offload_wi_start_stub</span><span class="p">(</span><span class="n">GroupID</span><span class="p">,</span> <span class="n">WIId</span><span class="p">,</span> <span class="n">WGSize</span><span class="p">);</span>
-  <span class="p">}</span>
+<span class="n">DEVICE_EXTERN_C</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">__itt_offload_wi_start_wrapper</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="mh">0xFF747469</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">GroupID</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">WIId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">WGSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="w">    </span><span class="n">__itt_offload_wi_start_stub</span><span class="p">(</span><span class="n">GroupID</span><span class="p">,</span><span class="w"> </span><span class="n">WIId</span><span class="p">,</span><span class="w"> </span><span class="n">WGSize</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -89,8 +87,8 @@ function, which a compiler would have to generate if there were no such
 a wrapper.</p>
 </section>
 <section id="conditional-compilation">
-<h2>Conditional compilation<a class="headerlink" href="#conditional-compilation" title="Permalink to this headline">¶</a></h2>
-<p>Data Parallel C++ compiler automatically instruments user code through
+<h2>Conditional compilation<a class="headerlink" href="#conditional-compilation" title="Link to this heading">¶</a></h2>
+<p>DPC++ compiler automatically instruments user code through
 SPIRITTAnnotations LLVM pass, which is enabled for targets, that natively
 support specialization constants (i.e., SPIR-V targets). Annotations are
 generated for barriers, atomics, work item start and finish.
@@ -125,8 +123,8 @@ annotations must set this environment variable to any value.</p>
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2022, Intel Corporation.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

@@ -1,4 +1,4 @@
 var device__global__map_8hpp =
 [
-    [ "add", "device__global__map_8hpp.html#a053c0a78d4b20a6cacd1c8abfc52b5b0", null ]
+    [ "add", "device__global__map_8hpp.html#a0fd622a542d08f1ac81abbe2f4de0532", null ]
 ];

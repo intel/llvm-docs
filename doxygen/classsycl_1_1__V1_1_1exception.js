@@ -1,0 +1,27 @@
+var classsycl_1_1__V1_1_1exception =
+[
+    [ "~exception", "classsycl_1_1__V1_1_1exception.html#ab8941231470456b82a6545fc6817fcc1", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#ae879f88433f558efa7655f19a13188a5", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a97d3510d2be9189ecd0fd49e0bbf3b06", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a32ca36533e3670ce8454de33d0e997f0", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a5ff1eb013c653bbe164400933f2da627", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#adeb5e7a1c0d21726030e86cafa42a1f5", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a7f69d06c96f159fd29718392a2a3150a", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#aa35edfdc1c65ac9b9464c264886b4e6d", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#ae5a8037e50279e0da9b4fbc8005d1bd2", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a941219cfe1fadf3c5f97a3182d0da395", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a4393caea9ebfbbb9d12a6a9d9f48bae0", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#af5cd72340caa0efd0fe519b6ff98aaed", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a3d1570539443e982b06e7d15fdf1d70b", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#accc89ac050a4fceefc946157a3d30eca", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#aacdf9d9994fe830f5dc2c40ae4a588da", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#ab30d2cfb21d516f0c6c92e3b72896798", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a4595019d09223e89b09df183dfb6de29", null ],
+    [ "__SYCL2020_DEPRECATED", "classsycl_1_1__V1_1_1exception.html#ae84cad0f75265679c770db5a2d090684", null ],
+    [ "category", "classsycl_1_1__V1_1_1exception.html#ada2d87c04e458467b64ed626d8b13fc8", null ],
+    [ "code", "classsycl_1_1__V1_1_1exception.html#aaa7de90efb6b99a1a856449cb870acfc", null ],
+    [ "get_cl_code", "classsycl_1_1__V1_1_1exception.html#aaf58bba8efb94a34eff14fc579307c3e", null ],
+    [ "get_context", "classsycl_1_1__V1_1_1exception.html#a8a43da0e4d157c777540628485f0064f", null ],
+    [ "has_context", "classsycl_1_1__V1_1_1exception.html#a599becbae22e3481b134da32c062b33f", null ],
+    [ "what", "classsycl_1_1__V1_1_1exception.html#aa172e3f74106bea2d06325617e067caf", null ]
+];

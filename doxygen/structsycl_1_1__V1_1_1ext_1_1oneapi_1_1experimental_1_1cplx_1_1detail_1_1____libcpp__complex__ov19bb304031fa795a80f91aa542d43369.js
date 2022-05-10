@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1cplx_1_1detail_1_1____libcpp__complex__ov19bb304031fa795a80f91aa542d43369 =
+[
+    [ "_ComplexType", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1cplx_1_1detail_1_1____libcpp__complex__ov19bb304031fa795a80f91aa542d43369.html#ada9c21b9ce0ef7b0b97799ae27a13255", null ],
+    [ "_ValueType", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1cplx_1_1detail_1_1____libcpp__complex__ov19bb304031fa795a80f91aa542d43369.html#ae0caa5a74c447534d12bec681835eba4", null ]
+];

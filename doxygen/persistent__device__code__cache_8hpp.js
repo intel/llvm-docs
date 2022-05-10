@@ -1,6 +1,6 @@
 var persistent__device__code__cache_8hpp =
 [
-    [ "LockCacheItem", "classcl_1_1sycl_1_1detail_1_1LockCacheItem.html", "classcl_1_1sycl_1_1detail_1_1LockCacheItem" ],
-    [ "PersistentDeviceCodeCache", "classcl_1_1sycl_1_1detail_1_1PersistentDeviceCodeCache.html", "classcl_1_1sycl_1_1detail_1_1PersistentDeviceCodeCache" ],
-    [ "getDirName", "persistent__device__code__cache_8hpp.html#a4fee3c8d03f15fb775c2ea8c4a92df58", null ]
+    [ "LockCacheItem", "classsycl_1_1__V1_1_1detail_1_1LockCacheItem.html", "classsycl_1_1__V1_1_1detail_1_1LockCacheItem" ],
+    [ "PersistentDeviceCodeCache", "classsycl_1_1__V1_1_1detail_1_1PersistentDeviceCodeCache.html", "classsycl_1_1__V1_1_1detail_1_1PersistentDeviceCodeCache" ],
+    [ "getDirName", "persistent__device__code__cache_8hpp.html#a3a7b5031be9a72f44e15a44e886f868c", null ]
 ];

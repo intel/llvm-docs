@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1GetCompileTimeProperties_3_01ded17bc0e0008fa95c1be1ac95278c3a82 =
+[
+    [ "type", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1GetCompileTimeProperties_3_01ded17bc0e0008fa95c1be1ac95278c3a82.html#a3f2bc35c135612fc292f2e99b0b9084d", null ]
+];

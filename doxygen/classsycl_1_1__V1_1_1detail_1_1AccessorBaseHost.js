@@ -1,0 +1,27 @@
+var classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost =
+[
+    [ "AccessorBaseHost", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#ac79b7e495c8d81183fd121ec1a07e016", null ],
+    [ "AccessorBaseHost", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a1d11d9a648faebfb02f623e3b7c28c20", null ],
+    [ "AccessorBaseHost", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a3fdb0d47b7ff4946362d1a3af1d4327f", null ],
+    [ "AccessorBaseHost", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a4caa3cfb9dc67f1359c61d85a398dc3e", null ],
+    [ "AccessorBaseHost", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#ad58b8a9b4d33d53640531021bb35838f", null ],
+    [ "getAccData", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a9586b6a0e8666a6136039592cfea7850", null ],
+    [ "getAccessRange", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a9a326039193a6caa05f7af79fb2ad513", null ],
+    [ "getAccessRange", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#ae2f665ca9e088df324e459f44134f557", null ],
+    [ "getElemSize", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a19f91b5629226e6a8b4dcab773891fc3", null ],
+    [ "getMemoryObject", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a3969280ce0c53c069aa38833d024e90b", null ],
+    [ "getMemoryRange", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a0c721e4780585bc5a9cc90bdb59df278", null ],
+    [ "getMemoryRange", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a9e2c79ee5c66177f361a5d3a15039f41", null ],
+    [ "getOffset", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a4605d7ec012a704d3c9e8fd21041c068", null ],
+    [ "getOffset", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#ace37b762ac1e5e7c138837c59f0585a3", null ],
+    [ "getPropList", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a62cf5af29c6d090b979adbdc81806c20", null ],
+    [ "getPtr", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a1a0825e30d5612be69c047113d33745b", null ],
+    [ "getPtr", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#ad6016fc532119a0bdcf10d44cf61b754", null ],
+    [ "getSyclObjImpl", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#ae31e386e364e7bbf08799b8f6995507e", null ],
+    [ "isMemoryObjectUsedByGraph", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#ad9bef88a8b953c27793ef19a226e34f1", null ],
+    [ "isPlaceholder", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a3df2a2cf953c0543c650a0e682d191ff", null ],
+    [ "accessor", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a4fe93ea8d613a9b7224780404781c279", null ],
+    [ "detail::createSyclObjFromImpl", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a71492293d0386f542d120a1fc3dfbb55", null ],
+    [ "sycl::ext::intel::esimd::detail::AccessorPrivateProxy", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a35ed974cc31db9557f924ad1c821e21b", null ],
+    [ "impl", "classsycl_1_1__V1_1_1detail_1_1AccessorBaseHost.html#a8795e44182ee4a88c3ed1be34cf26a88", null ]
+];

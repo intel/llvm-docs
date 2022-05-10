@@ -1,11 +1,9 @@
 var builtins__relational_8cpp =
 [
-    [ "FOrdEqual", "builtins__relational_8cpp.html#a36526f7e4c43bcb8aa7cdca56819a68f", null ],
-    [ "FOrdEqual", "builtins__relational_8cpp.html#a176efcc90287d941329801c4f640f454", null ],
-    [ "FOrdEqual", "builtins__relational_8cpp.html#a9d099df2860549707be0d5249af3e9b6", null ],
-    [ "FUnordNotEqual", "builtins__relational_8cpp.html#ab8c8ac1df339dc0fc450e8a357a3d9ec", null ],
-    [ "FUnordNotEqual", "builtins__relational_8cpp.html#a5f7f5fc87709b4eb508ac7016e7d17f7", null ],
-    [ "FUnordNotEqual", "builtins__relational_8cpp.html#a2f284e9699f55b61c0e14699b91ff621", null ],
-    [ "MAKE_1V_2V_FUNC", "builtins__relational_8cpp.html#a63975fd0c89e4244ad3c3674133c8d79", null ],
-    [ "__vFUnordNotEqual", "builtins__relational_8cpp.html#a3f24ad6a7da65e8caa7e30519eaf3a56", null ]
+    [ "rel_res_t", "builtins__relational_8cpp.html#a1a939af391e6164bfbfcdd0a35db4b57", null ],
+    [ "MAKE_1V_2V_FUNC", "builtins__relational_8cpp.html#a405b1af3199840b0595e5e460f56b7ab", null ],
+    [ "sycl_host_FOrdEqual", "builtins__relational_8cpp.html#a36f85d4e5f29a1cf9cbf008e7df633ec", null ],
+    [ "sycl_host_FOrdEqual", "builtins__relational_8cpp.html#afa09872c0efd4e793835749fd9ca550b", null ],
+    [ "sycl_host_FOrdEqual", "builtins__relational_8cpp.html#ab8923e942e69ab92911702ffbe3f3c9a", null ],
+    [ "__vFOrdEqual", "builtins__relational_8cpp.html#a725e969667966bfff7ec8682019644a9", null ]
 ];

@@ -1,18 +1,16 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>oneAPI DPC++ Compiler and Runtime architecture design &#8212; oneAPI DPC++ Compiler  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=e491ac2d" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="SYCL Kernel Parameter Handling and Array Support" href="KernelParameterPassing.html" />
@@ -36,16 +34,16 @@
       <div class="content" role="main">
         
         
-  <section class="tex2jax_ignore mathjax_ignore" id="oneapi-dpc-compiler-and-runtime-architecture-design">
-<h1>oneAPI DPC++ Compiler and Runtime architecture design<a class="headerlink" href="#oneapi-dpc-compiler-and-runtime-architecture-design" title="Permalink to this headline">¶</a></h1>
+  <section id="oneapi-dpc-compiler-and-runtime-architecture-design">
+<h1>oneAPI DPC++ Compiler and Runtime architecture design<a class="headerlink" href="#oneapi-dpc-compiler-and-runtime-architecture-design" title="Link to this heading">¶</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
 <p>This document describes the architecture of the DPC++ compiler and runtime
 library. For DPC++ specification see
 <a class="reference external" href="https://spec.oneapi.com/versions/latest/elements/dpcpp/source/index.html">spec</a>.</p>
 </section>
 <section id="dpc-compiler-architecture">
-<h2>DPC++ Compiler architecture<a class="headerlink" href="#dpc-compiler-architecture" title="Permalink to this headline">¶</a></h2>
+<h2>DPC++ Compiler architecture<a class="headerlink" href="#dpc-compiler-architecture" title="Link to this heading">¶</a></h2>
 <p>DPC++ application compilation flow:</p>
 <p><img alt="High level component diagram for DPC++ Compiler" src="../_images/Compiler-HLD.svg" /></p>
 <p><em>Diagram 1. Application build flow.</em></p>
@@ -104,7 +102,7 @@ same clang compiler is used for the host compilation, information provided in th
 integration header is used (included) by the SYCL runtime implementation, so the
 header must be available before the host compilation starts.</em></p>
 <section id="sycl-support-in-clang-front-end">
-<h3>SYCL support in Clang front-end<a class="headerlink" href="#sycl-support-in-clang-front-end" title="Permalink to this headline">¶</a></h3>
+<h3>SYCL support in Clang front-end<a class="headerlink" href="#sycl-support-in-clang-front-end" title="Link to this heading">¶</a></h3>
 <p>SYCL support in Clang front-end can be split into the following components:</p>
 <ul class="simple">
 <li><p>Device code outlining. This component is responsible for identifying and
@@ -117,40 +115,40 @@ device code.</p></li>
 binding host and device parts of the SYCL code via OpenCL API.</p></li>
 </ul>
 <section id="device-code-outlining">
-<h4>Device code outlining<a class="headerlink" href="#device-code-outlining" title="Permalink to this headline">¶</a></h4>
+<h4>Device code outlining<a class="headerlink" href="#device-code-outlining" title="Link to this heading">¶</a></h4>
 <p>Here is a code example of a SYCL program that demonstrates compiler outlining
 work:</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="o">++</span><span class="n">x</span><span class="p">;</span> <span class="p">}</span>
-<span class="kt">int</span> <span class="nf">bar</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">throw</span> <span class="n">std</span><span class="o">::</span><span class="n">exception</span><span class="p">{</span><span class="s">&quot;CPU code only!&quot;</span><span class="p">};</span> <span class="p">}</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">++</span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">bar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">exception</span><span class="p">{</span><span class="s">&quot;CPU code only!&quot;</span><span class="p">};</span><span class="w"> </span><span class="p">}</span>
 <span class="p">...</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="p">;</span>
-<span class="n">queue</span> <span class="n">Q</span><span class="p">;</span>
-<span class="n">buffer</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">{</span><span class="n">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">1024</span><span class="p">}};</span>
-<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span> <span class="n">cgh</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">auto</span> <span class="n">A</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">access</span><span class="o">::</span><span class="n">mode</span><span class="o">::</span><span class="n">write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cgh</span><span class="p">);</span>
-      <span class="n">cgh</span><span class="p">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="n">init_a</span><span class="o">&gt;</span><span class="p">(</span><span class="n">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">1024</span><span class="p">},</span> <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">id</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">A</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">foo</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
-      <span class="p">});</span>
-    <span class="p">}</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">sycl</span><span class="p">;</span>
+<span class="n">queue</span><span class="w"> </span><span class="n">Q</span><span class="p">;</span>
+<span class="n">buffer</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">{</span><span class="n">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">1024</span><span class="p">}};</span>
+<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cgh</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">auto</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">access</span><span class="o">::</span><span class="n">mode</span><span class="o">::</span><span class="n">write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cgh</span><span class="p">);</span>
+<span class="w">      </span><span class="n">cgh</span><span class="p">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="n">init_a</span><span class="o">&gt;</span><span class="p">(</span><span class="n">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">1024</span><span class="p">},</span><span class="w"> </span><span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">id</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">A</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">foo</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+<span class="w">      </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">...</span>
 </pre></div>
 </div>
 <p>In this example, the compiler needs to compile the lambda expression passed
-to the <code class="docutils literal notranslate"><span class="pre">cl::sycl::handler::parallel_for</span></code> method, as well as the function <code class="docutils literal notranslate"><span class="pre">foo</span></code>
+to the <code class="docutils literal notranslate"><span class="pre">sycl::handler::parallel_for</span></code> method, as well as the function <code class="docutils literal notranslate"><span class="pre">foo</span></code>
 called from the lambda expression for the device.</p>
 <p>The compiler must also ignore the <code class="docutils literal notranslate"><span class="pre">bar</span></code> function when we compile the
 “device” part of the single source code, as it’s unused inside the device
 portion of the source code (the contents of the lambda expression passed to the
-<code class="docutils literal notranslate"><span class="pre">cl::sycl::handler::parallel_for</span></code> and any function called from this lambda
+<code class="docutils literal notranslate"><span class="pre">sycl::handler::parallel_for</span></code> and any function called from this lambda
 expression).</p>
 <p>The current approach is to use the SYCL kernel attribute in the runtime to
-mark code passed to <code class="docutils literal notranslate"><span class="pre">cl::sycl::handler::parallel_for</span></code> as “kernel functions”.
+mark code passed to <code class="docutils literal notranslate"><span class="pre">sycl::handler::parallel_for</span></code> as “kernel functions”.
 The runtime library can’t mark foo as “device” code - this is a compiler
 job: to traverse all symbols accessible from kernel functions and add them to
 the “device part” of the code marking them with the new SYCL device attribute.</p>
 </section>
 <section id="lowering-of-lambda-function-objects-and-named-function-objects">
-<h4>Lowering of lambda function objects and named function objects<a class="headerlink" href="#lowering-of-lambda-function-objects-and-named-function-objects" title="Permalink to this headline">¶</a></h4>
+<h4>Lowering of lambda function objects and named function objects<a class="headerlink" href="#lowering-of-lambda-function-objects-and-named-function-objects" title="Link to this heading">¶</a></h4>
 <p>All SYCL memory objects shared between host and device (buffers/images,
 these objects map to OpenCL buffers and images) must be accessed through special
 <code class="docutils literal notranslate"><span class="pre">accessor</span></code> classes. The “device” side implementation of these classes contains
@@ -172,34 +170,34 @@ additionally does some manipulation to initialize SYCL kernel data members
 with these parameters. In some pseudo code the OpenCL kernel function for the
 previous code snippet above looks like this:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// SYCL kernel is defined in SYCL headers:</span>
-<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">KernelName</span><span class="p">,</span> <span class="k">typename</span> <span class="n">KernelType</span><span class="cm">/*, ...*/</span><span class="o">&gt;</span>
-<span class="n">__attribute__</span><span class="p">((</span><span class="n">sycl_kernel</span><span class="p">))</span> <span class="kt">void</span> <span class="n">sycl_kernel_function</span><span class="p">(</span><span class="n">KernelType</span> <span class="n">KernelFuncObj</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// ...</span>
-  <span class="n">KernelFuncObj</span><span class="p">();</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">KernelName</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">KernelType</span><span class="cm">/*, ...*/</span><span class="o">&gt;</span>
+<span class="n">__attribute__</span><span class="p">((</span><span class="n">sycl_kernel</span><span class="p">))</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">sycl_kernel_function</span><span class="p">(</span><span class="n">KernelType</span><span class="w"> </span><span class="n">KernelFuncObj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="w">  </span><span class="n">KernelFuncObj</span><span class="p">();</span>
 <span class="p">}</span>
 
 <span class="c1">// Generated OpenCL kernel function</span>
-<span class="n">__kernel</span> <span class="n">KernelName</span><span class="p">(</span><span class="n">global</span> <span class="kt">int</span><span class="o">*</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">KernelType</span> <span class="n">KernelFuncObj</span><span class="p">;</span> <span class="c1">// Actually kernel function object declaration</span>
-  <span class="c1">// doesn&#39;t have a name in AST.</span>
-  <span class="c1">// Let the kernel function object have one captured field - accessor A.</span>
-  <span class="c1">// We need to init it with global pointer from arguments:</span>
-  <span class="n">KernelFuncObj</span><span class="p">.</span><span class="n">A</span><span class="p">.</span><span class="n">__init</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
-  <span class="c1">// Body of the SYCL kernel from SYCL headers:</span>
-  <span class="p">{</span>
-    <span class="n">KernelFuncObj</span><span class="p">();</span>
-  <span class="p">}</span>
+<span class="n">__kernel</span><span class="w"> </span><span class="n">KernelName</span><span class="p">(</span><span class="n">global</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">KernelType</span><span class="w"> </span><span class="n">KernelFuncObj</span><span class="p">;</span><span class="w"> </span><span class="c1">// Actually kernel function object declaration</span>
+<span class="w">  </span><span class="c1">// doesn&#39;t have a name in AST.</span>
+<span class="w">  </span><span class="c1">// Let the kernel function object have one captured field - accessor A.</span>
+<span class="w">  </span><span class="c1">// We need to init it with global pointer from arguments:</span>
+<span class="w">  </span><span class="n">KernelFuncObj</span><span class="p">.</span><span class="n">A</span><span class="p">.</span><span class="n">__init</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Body of the SYCL kernel from SYCL headers:</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">KernelFuncObj</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>OpenCL kernel function is generated by the compiler inside the Sema using AST
 nodes. Additional details of kernel parameter passing may be found in the
 document
-<a class="reference internal" href="KernelParameterPassing.html"><span class="doc std std-doc">SYCL Kernel Parameter Handling and Array Support</span></a>.</p>
+<a class="reference internal" href="KernelParameterPassing.html"><span class="std std-doc">SYCL Kernel Parameter Handling and Array Support</span></a>.</p>
 </section>
 </section>
 <section id="sycl-support-in-the-driver">
-<h3>SYCL support in the driver<a class="headerlink" href="#sycl-support-in-the-driver" title="Permalink to this headline">¶</a></h3>
+<h3>SYCL support in the driver<a class="headerlink" href="#sycl-support-in-the-driver" title="Link to this heading">¶</a></h3>
 <p>SYCL offload support in the driver is based on the clang driver concepts and
 defines:</p>
 <ul class="simple">
@@ -216,7 +214,7 @@ the device binary descriptor by the offload wrapper tool. With device code
 splitting feature enabled, there can be multiple such sets (clusters) of files -
 one per each separate device binary.</p>
 <p>Current design of clang driver doesn’t allow to model that, namely:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Multiple inputs/outputs in the action graph.</p></li>
 <li><p>Logical grouping of multiple inputs/outputs. For example, an input or output
 can consist of multiple pairs of files, where each pair represents information
@@ -276,7 +274,7 @@ construct a wrapper object which embeds all those files.</p></li>
 <p>Note that the graph does not change when more rows (clusters) or columns
 (e.g. a “manifest” file) are added to the table.</p>
 <section id="enable-sycl-offload">
-<h4>Enable SYCL offload<a class="headerlink" href="#enable-sycl-offload" title="Permalink to this headline">¶</a></h4>
+<h4>Enable SYCL offload<a class="headerlink" href="#enable-sycl-offload" title="Link to this heading">¶</a></h4>
 <p>To enable compilation following single-source multiple compiler-passes (SMCP)
 technique which is described in the SYCL specification, a special option
 must be passed to the clang driver:</p>
@@ -290,7 +288,7 @@ the SYCL standard will be used for the compilation.
 The default value for this option is <code class="docutils literal notranslate"><span class="pre">1.2.1</span></code>.</p>
 </section>
 <section id="ahead-of-time-aot-compilation">
-<h4>Ahead of time (AOT) compilation<a class="headerlink" href="#ahead-of-time-aot-compilation" title="Permalink to this headline">¶</a></h4>
+<h4>Ahead of time (AOT) compilation<a class="headerlink" href="#ahead-of-time-aot-compilation" title="Link to this heading">¶</a></h4>
 <p>Ahead-of-time compilation is the process of invoking the back-end at compile
 time to produce the final binary, as opposed to just-in-time (JIT) compilation
 when final code generation is deferred until application runtime time.</p>
@@ -300,7 +298,7 @@ and final device code can be tested before deploying.</p>
 optimizations.</p>
 </section>
 <section id="list-of-native-targets">
-<h4>List of native targets<a class="headerlink" href="#list-of-native-targets" title="Permalink to this headline">¶</a></h4>
+<h4>List of native targets<a class="headerlink" href="#list-of-native-targets" title="Link to this heading">¶</a></h4>
 <p>The ahead-of-time compilation mode implies that there must be a way to specify
 a set of target architectures for which to compile device code. By default, the
 compiler generates SPIR-V and OpenCL device JIT compiler produces native target
@@ -315,7 +313,7 @@ approach is assumed and device code is compiled for a single target triple -
 <code class="docutils literal notranslate"><span class="pre">[spir,spir64]-*-*</span></code>.</p>
 </section>
 <section id="device-code-formats">
-<h4>Device code formats<a class="headerlink" href="#device-code-formats" title="Permalink to this headline">¶</a></h4>
+<h4>Device code formats<a class="headerlink" href="#device-code-formats" title="Link to this heading">¶</a></h4>
 <p>Each target may support a number of code forms, each device compiler defines
 and understands mnemonics designating a particular code form, for example
 “<code class="docutils literal notranslate"><span class="pre">visa:3.3</span></code>” could designate virtual ISA version 3.3 for Intel GPU target (Gen
@@ -336,7 +334,7 @@ the GPU offline compiler manual by detecting your local <code class="docutils li
 installation and running <code class="docutils literal notranslate"><span class="pre">ocloc</span> <span class="pre">compile</span> <span class="pre">--help</span></code>.</p>
 </section>
 <section id="separate-compilation-and-linking">
-<h4>Separate Compilation and Linking<a class="headerlink" href="#separate-compilation-and-linking" title="Permalink to this headline">¶</a></h4>
+<h4>Separate Compilation and Linking<a class="headerlink" href="#separate-compilation-and-linking" title="Link to this heading">¶</a></h4>
 <p>The compiler supports such features as</p>
 <ul class="simple">
 <li><p>linking of device code obtained from different source files before generating
@@ -365,7 +363,7 @@ LLVM IR uses function attributes to satisfy “one definition rule”, which hav
 no counterparts in SPIR-V.</em></p>
 </section>
 <section id="fat-binary-creation-details">
-<h4>Fat binary creation details<a class="headerlink" href="#fat-binary-creation-details" title="Permalink to this headline">¶</a></h4>
+<h4>Fat binary creation details<a class="headerlink" href="#fat-binary-creation-details" title="Link to this heading">¶</a></h4>
 <p>“Fat binary” is a result of the final host linking step - this is a host binary
 with device binary(s) embedded. When run, it automatically registers
 all available device binaries within the SYCL runtime library. This section
@@ -377,7 +375,7 @@ this wrapper object is linked normally with the rest of host objects and/or
 libraries.</p>
 <p>The wrapper object is created by the <code class="docutils literal notranslate"><span class="pre">clang-offload-wrapper</span></code> tool, or simply
 “offload wrapper”. The created wrapper object has two main components:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Global symbol - offload descriptor - pointing to a special data structure
 put into in the object’s data section. It encompasses all needed information
 about the wrapped device binaries - number of binaries, symbols each binary
@@ -393,7 +391,7 @@ registration function passing it as a parameter.</p></li>
 top-level structure is <code class="docutils literal notranslate"><span class="pre">pi_device_binaries_struct</span></code>.</p>
 </section>
 <section id="device-link">
-<h4>Device Link<a class="headerlink" href="#device-link" title="Permalink to this headline">¶</a></h4>
+<h4>Device Link<a class="headerlink" href="#device-link" title="Link to this heading">¶</a></h4>
 <p>The -fsycl-link flag instructs the compiler to fully link device code without
 fully linking host code. The result of such a compile is a fat object that
 contains a fully linked device binary. The primary motivation for this flow
@@ -403,7 +401,7 @@ their host code. In the case where device image generation takes a long time
 <p>For example, if the user separated source code into four files: dev_a.cpp,
 dev_b.cpp, host_a.cpp and host_b.cpp where only dev_a.cpp and dev_b.cpp contain
 device code, they can divide the compilation process into three steps:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Device link: dev_a.cpp dev_b.cpp -&gt; dev_image.o (contain device image)</p></li>
 <li><p>Host Compile (c): host_a.cpp -&gt; host_a.o; host_b.cpp -&gt; host_b.o</p></li>
 <li><p>Linking: dev_image.o host_a.o host_b.o -&gt; executable</p></li>
@@ -414,7 +412,7 @@ after modifying only host_a.cpp and host_b.cpp, they can simply run steps 2 and
 <p>The compiler is responsible for verifying that the user provided all the
 relevant files to the device link step. There are 2 cases that have to be
 checked:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Missing symbols referenced by the kernels present in the device link step
 (e.g. functions called by or global variables used by the known kernels).</p></li>
 <li><p>Missing kernels.</p></li>
@@ -422,16 +420,34 @@ checked:</p>
 <p>Case 1 can be identified in the device binary generation stage (step 1) by
 scanning the known kernels. Case 2 must be verified by the driver by checking
 for newly introduced kernels in the final link stage (step 3).</p>
-<p>The llvm-no-spir-kernel tool was introduced to facilitate checking for case 2 in
-the driver. It detects if a module includes kernels and is invoked as follows:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>llvm-no-spir-kernel host.bc
-</pre></div>
-</div>
-<p>It returns 0 if no kernels are present and 1 otherwise.</p>
+</section>
+<section id="device-link-during-compilation">
+<h4>Device Link during compilation<a class="headerlink" href="#device-link-during-compilation" title="Link to this heading">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">-fno-sycl-rdc</span></code> flag can be used in combination with the <code class="docutils literal notranslate"><span class="pre">-c</span></code> option
+when generating fat objects. This option combination informs the compiler to
+perform a full device link stage against the device object, creating a fat
+object that contains the corresponding host object and a fully compiled device
+binary. It is expected that usage of <code class="docutils literal notranslate"><span class="pre">-fno-sycl-rdc</span></code> coincide with
+ahead of time compiling.</p>
+<p>When using the generated fat object in this case, the compiler will recognize
+the fat object that contains the fully linked device binary. The device binary
+will be unbundled and linked during the final host link and will not be sent
+through any additional device linking steps.</p>
+<ol class="arabic simple">
+<li><p>Generation of fat object: a.cpp -&gt; a_fat.o (contains host object and full
+device image)</p></li>
+<li><p>Linking: a_fat.o -&gt; executable</p></li>
+</ol>
+<p>The generation of the full device image during the compilation (-c) step of
+creating the object allows for library creation that does not require full
+device linking steps which can be a burden to the user.  Providing these early
+device linking steps give the provider of the archives/objects a better user
+experience.</p>
 </section>
 <section id="device-code-post-link-step">
-<h4>Device code post-link step<a class="headerlink" href="#device-code-post-link-step" title="Permalink to this headline">¶</a></h4>
-<p>At link time all the device code is always linked into a single LLVM IR module.
+<h4>Device code post-link step<a class="headerlink" href="#device-code-post-link-step" title="Link to this heading">¶</a></h4>
+<p>At link time all the device code is linked into
+a single LLVM IR module unless <code class="docutils literal notranslate"><span class="pre">-fno-sycl-rdc</span></code> is specified.
 <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool performs a number of final transformations on this LLVM IR
 module before handing it off to the offload wrapper. Those include:</p>
 <ul class="simple">
@@ -463,14 +479,17 @@ list coming either from <code class="docutils literal notranslate"><span class="
 Targeting PTX currently only accepts a single input file for processing, so
 <code class="docutils literal notranslate"><span class="pre">file-table-tform</span></code> is used to extract the code file from the file table, which
 is then processed by the
-<a class="reference external" href="#device-code-post-link-step-for-CUDA">“PTX target processing” step</a>.
+<a class="reference internal" href="#device-code-post-link-step-for-cuda">“PTX target processing” step</a>.
 The resulting device binary is inserted back into the file table in place of the
-extracted code file using <code class="docutils literal notranslate"><span class="pre">file-table-tform</span></code>.</p>
+extracted code file using <code class="docutils literal notranslate"><span class="pre">file-table-tform</span></code>. If <code class="docutils literal notranslate"><span class="pre">-fno-sycl-rdc</span></code> is specified,
+all shown tools are invoked multiple times, once per translation unit rather than
+once total. See <a class="reference internal" href="NonRelocatableDeviceCode.html"><span class="std std-doc">Non-Relocatable Device Code</span></a> for
+more information.</p>
 <section id="device-code-splitting">
-<h5>Device code splitting<a class="headerlink" href="#device-code-splitting" title="Permalink to this headline">¶</a></h5>
+<h5>Device code splitting<a class="headerlink" href="#device-code-splitting" title="Link to this heading">¶</a></h5>
 <p>Putting all device code into a single SPIR-V module does not work well in the
 following cases:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>There are thousands of kernels defined and only small part of them is used at
 run-time. Having them all in one SPIR-V module significantly increases JIT time.</p></li>
 <li><p>Device code can be specialized for different devices. For example, kernels
@@ -484,12 +503,16 @@ ones. The following features is supported:</p>
 <li><p>Emitting a separate module for source (translation unit)</p></li>
 <li><p>Emitting a separate module for each kernel</p></li>
 </ul>
+<p>If the device code does not use <code class="docutils literal notranslate"><span class="pre">SYCL_EXTERNAL</span></code> functions, device code splitting
+can be combined with the <code class="docutils literal notranslate"><span class="pre">-fno-sycl-rdc</span></code> option for improved compiler performance.</p>
 <p>The current approach is:</p>
 <ul class="simple">
 <li><p>Generate special meta-data with translation unit ID for each kernel in SYCL
 front-end. This ID will be used to group kernels on per-translation unit basis</p></li>
 <li><p>Link all device LLVM modules using llvm-link</p></li>
-<li><p>Perform split on a fully linked module</p></li>
+<li><p>Perform split on a fully linked module, unless <code class="docutils literal notranslate"><span class="pre">-fno-sycl-rdc</span></code> is specified,
+where splits are performed on a module containing only current translation unit and
+linked device libraries</p></li>
 <li><p>Generate a symbol table (list of kernels) for each produced device module for
 proper module selection in runtime</p></li>
 <li><p>Perform SPIR-V translation and AOT compilation (if requested) on each produced
@@ -499,6 +522,8 @@ image</p></li>
 </ul>
 <p>Device code splitting process:
 <img alt="Device code splitting" src="../_images/DeviceCodeSplit.svg" /></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">llvm-link</span></code> box does not occur when <code class="docutils literal notranslate"><span class="pre">-fno-sycl-rdc</span></code> is specified. Rather,
+all subsequent boxes occur per-source.</p>
 <p>The “split” box is implemented as functionality of the dedicated tool
 <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code>. The tool runs a set of LLVM passes to split input module and
 generates a symbol table (list of kernels) for each produced device module.</p>
@@ -510,20 +535,21 @@ driver:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">per_source</span></code> - enables emitting a separate module for each source (translation
 unit)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">per_kernel</span></code> - enables emitting a separate module for each kernel</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">off</span></code> - disables device code split</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">off</span></code> - disables device code split. If <code class="docutils literal notranslate"><span class="pre">-fno-sycl-rdc</span></code> is specified, the behavior is
+the same as <code class="docutils literal notranslate"><span class="pre">per_source</span></code></p></li>
 </ul>
 </section>
 <section id="symbol-table-generation">
-<h5>Symbol table generation<a class="headerlink" href="#symbol-table-generation" title="Permalink to this headline">¶</a></h5>
+<h5>Symbol table generation<a class="headerlink" href="#symbol-table-generation" title="Link to this heading">¶</a></h5>
 <p>TBD</p>
 </section>
 <section id="specialization-constants-lowering">
-<h5>Specialization constants lowering<a class="headerlink" href="#specialization-constants-lowering" title="Permalink to this headline">¶</a></h5>
-<p>See <a class="reference internal" href="SpecializationConstants.html"><span class="doc std std-doc">corresponding documentation</span></a></p>
+<h5>Specialization constants lowering<a class="headerlink" href="#specialization-constants-lowering" title="Link to this heading">¶</a></h5>
+<p>See corresponding documentation</p>
 </section>
 </section>
 <section id="cuda-support">
-<h4>CUDA support<a class="headerlink" href="#cuda-support" title="Permalink to this headline">¶</a></h4>
+<h4>CUDA support<a class="headerlink" href="#cuda-support" title="Link to this heading">¶</a></h4>
 <p>The driver supports compilation to NVPTX when the <code class="docutils literal notranslate"><span class="pre">nvptx64-nvidia-cuda</span></code> is
 passed to <code class="docutils literal notranslate"><span class="pre">-fsycl-targets</span></code>.</p>
 <p>Unlike other AOT targets, the bitcode module linked from intermediate compiled
@@ -536,8 +562,8 @@ Instead it is used to generate remangled variants
 <code class="docutils literal notranslate"><span class="pre">remangled-l32-signed_char.libspirv-nvptx64--nvidiacl.bc</span></code> to handle primitive type
 differences between Linux and Windows.</p>
 <section id="device-code-post-link-step-for-cuda">
-<h5>Device code post-link step for CUDA<a class="headerlink" href="#device-code-post-link-step-for-cuda" title="Permalink to this headline">¶</a></h5>
-<p>During the “PTX target processing” in the device linking step <a class="reference external" href="#device-code-post-link-step">Device
+<h5>Device code post-link step for CUDA<a class="headerlink" href="#device-code-post-link-step-for-cuda" title="Link to this heading">¶</a></h5>
+<p>During the “PTX target processing” in the device linking step <a class="reference internal" href="#device-code-post-link-step">Device
 code post-link step</a>, the llvm bitcode
 objects for the CUDA target are linked together during the common
 <code class="docutils literal notranslate"><span class="pre">llvm-link</span></code> step and then split using the <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool.
@@ -551,7 +577,7 @@ by <code class="docutils literal notranslate"><span class="pre">sycl-post-link</
 <p><img alt="NVPTX AOT build" src="../_images/DevicePTXProcessing.svg" /></p>
 </section>
 <section id="checking-if-the-compiler-is-targeting-nvptx">
-<h5>Checking if the compiler is targeting NVPTX<a class="headerlink" href="#checking-if-the-compiler-is-targeting-nvptx" title="Permalink to this headline">¶</a></h5>
+<h5>Checking if the compiler is targeting NVPTX<a class="headerlink" href="#checking-if-the-compiler-is-targeting-nvptx" title="Link to this heading">¶</a></h5>
 <p>When the SYCL compiler is in device mode and targeting the NVPTX backend,
 the compiler defines <code class="docutils literal notranslate"><span class="pre">__SYCL_DEVICE_ONLY__</span></code> and <code class="docutils literal notranslate"><span class="pre">__NVPTX__</span></code> macros. This
 macro combination can safely be used to enable NVPTX specific code
@@ -559,12 +585,12 @@ path in SYCL kernels.</p>
 <p><em>Note: these macros are defined only during the device compilation phase.</em></p>
 </section>
 <section id="nvptx-builtins">
-<h5>NVPTX Builtins<a class="headerlink" href="#nvptx-builtins" title="Permalink to this headline">¶</a></h5>
+<h5>NVPTX Builtins<a class="headerlink" href="#nvptx-builtins" title="Link to this heading">¶</a></h5>
 <p>Builtins are implemented in OpenCL C within libclc. OpenCL C treats <code class="docutils literal notranslate"><span class="pre">long</span></code>
 types as 64 bit and has no <code class="docutils literal notranslate"><span class="pre">long</span> <span class="pre">long</span></code> types while Windows DPC++ treats <code class="docutils literal notranslate"><span class="pre">long</span></code>
 types like 32-bit integers and <code class="docutils literal notranslate"><span class="pre">long</span> <span class="pre">long</span></code> types like 64-bit integers.
 Differences between the primitive types can cause applications to use
-incompatible libclc built-ins. A remangler creates multiple libspriv files
+incompatible libclc built-ins. A remangler creates multiple libspirv files
 with different remangled function names to support both Windows and Linux.
 When building a SYCL application targeting the CUDA backend the driver
 will link the device code with
@@ -577,20 +603,20 @@ compiler exposes NVPTX builtins supported by clang.</p>
 <p><em>Note: this enable NVPTX specific features which cannot be supported by other
 targets or the host.</em></p>
 <p>Example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="nf">my_min</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="nf">my_min</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="cp">#if defined(__NVPTX__) &amp;&amp; defined(__SYCL_DEVICE_ONLY__)</span>
-  <span class="c1">// Only available if in device mode and</span>
-  <span class="c1">// while compiling for the NVPTX target.</span>
-  <span class="k">return</span> <span class="n">__nvvm_fmin_d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Only available if in device mode and</span>
+<span class="w">  </span><span class="c1">// while compiling for the NVPTX target.</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">__nvvm_fmin_d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span>
 <span class="cp">#else</span>
-  <span class="k">return</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="o">?</span> <span class="nl">x</span> <span class="p">:</span> <span class="n">y</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
 <span class="cp">#endif</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="local-memory-support">
-<h5>Local memory support<a class="headerlink" href="#local-memory-support" title="Permalink to this headline">¶</a></h5>
+<h5>Local memory support<a class="headerlink" href="#local-memory-support" title="Link to this heading">¶</a></h5>
 <p>In CUDA, users can only allocate one chunk of host allocated shared memory
 (which maps to SYCL’s local accessors). This chunk of memory is allocated as an
 array <code class="docutils literal notranslate"><span class="pre">extern</span> <span class="pre">__shared__</span> <span class="pre">&lt;type&gt;</span> <span class="pre">&lt;name&gt;[];</span></code> which LLVM represents as an external
@@ -610,21 +636,21 @@ representing the offset in bytes to use with the global symbol</p></li>
 offset by the value of the integer passed as parameter</p></li>
 </ul>
 <p>As an example, the following kernel:</p>
-<div class="highlight-LLVM notranslate"><div class="highlight"><pre><span></span><span class="k">define</span> <span class="kt">void</span> <span class="vg">@SYCL_generated_kernel</span><span class="p">(</span><span class="k">i64</span> <span class="k">addrspace</span><span class="p">(</span><span class="m">3</span><span class="p">)*</span> <span class="k">nocapture</span> <span class="nv">%local_ptr</span><span class="p">,</span> <span class="k">i32</span> <span class="nv">%arg</span><span class="p">,</span> <span class="k">i64</span> <span class="k">addrspace</span><span class="p">(</span><span class="m">3</span><span class="p">)*</span> <span class="k">nocapture</span> <span class="nv">%local_ptr2</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nv nv-Anonymous">%0</span> <span class="p">=</span> <span class="k">load</span> <span class="k">i64</span><span class="p">,</span> <span class="k">i64</span> <span class="k">addrspace</span><span class="p">(</span><span class="m">3</span><span class="p">)*</span> <span class="nv">%local_ptr</span>
-  <span class="nv nv-Anonymous">%1</span> <span class="p">=</span> <span class="k">load</span> <span class="k">i64</span><span class="p">,</span> <span class="k">i64</span> <span class="k">addrspace</span><span class="p">(</span><span class="m">3</span><span class="p">)*</span> <span class="nv">%local_ptr2</span>
+<div class="highlight-LLVM notranslate"><div class="highlight"><pre><span></span><span class="k">define</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="vg">@SYCL_generated_kernel</span><span class="p">(</span><span class="kt">i64</span><span class="w"> </span><span class="k">addrspace</span><span class="p">(</span><span class="m">3</span><span class="p">)*</span><span class="w"> </span><span class="k">nocapture</span><span class="w"> </span><span class="nv">%local_ptr</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv">%arg</span><span class="p">,</span><span class="w"> </span><span class="kt">i64</span><span class="w"> </span><span class="k">addrspace</span><span class="p">(</span><span class="m">3</span><span class="p">)*</span><span class="w"> </span><span class="k">nocapture</span><span class="w"> </span><span class="nv">%local_ptr2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">load</span><span class="w"> </span><span class="kt">i64</span><span class="p">,</span><span class="w"> </span><span class="kt">i64</span><span class="w"> </span><span class="k">addrspace</span><span class="p">(</span><span class="m">3</span><span class="p">)*</span><span class="w"> </span><span class="nv">%local_ptr</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">load</span><span class="w"> </span><span class="kt">i64</span><span class="p">,</span><span class="w"> </span><span class="kt">i64</span><span class="w"> </span><span class="k">addrspace</span><span class="p">(</span><span class="m">3</span><span class="p">)*</span><span class="w"> </span><span class="nv">%local_ptr2</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Is transformed into this kernel when targeting CUDA:</p>
-<div class="highlight-LLVM notranslate"><div class="highlight"><pre><span></span>@SYCL_generated_kernel.shared_mem = external dso_local local_unnamed_addr addrspace(3) global [0 x i8], align 4
+<div class="highlight-LLVM notranslate"><div class="highlight"><pre><span></span><span class="vg">@SYCL_generated_kernel.shared_mem</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">external</span><span class="w"> </span><span class="k">dso_local</span><span class="w"> </span><span class="k">local_unnamed_addr</span><span class="w"> </span><span class="k">addrspace</span><span class="p">(</span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="k">global</span><span class="w"> </span><span class="p">[</span><span class="m">0</span><span class="w"> </span><span class="k">x</span><span class="w"> </span><span class="kt">i8</span><span class="p">],</span><span class="w"> </span><span class="k">align</span><span class="w"> </span><span class="m">4</span>
 
-define void @SYCL_generated_kernel(i32 %local_ptr_offset, i32 %arg, i32 %local_ptr_offset2) {
-  %new_local_ptr = getelementptr inbounds [0 x i8], [0 x i8] addrspace(3)* @SYCL_generated_kernel.shared_mem, i32 0, i32 %local_ptr_offset
-  %new_local_ptr2 = getelementptr inbounds [0 x i8], [0 x i8] addrspace(3)* @SYCL_generated_kernel.shared_mem, i32 0, i32 %local_ptr_offset2
-  %0 = load i32, i32 addrspace(3)* %new_local_ptr
-  %1 = load i64, i64 addrspace(3)* %new_local_ptr2
-}
+<span class="k">define</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="vg">@SYCL_generated_kernel</span><span class="p">(</span><span class="kt">i32</span><span class="w"> </span><span class="nv">%local_ptr_offset</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv">%arg</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv">%local_ptr_offset2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nv">%new_local_ptr</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">getelementptr</span><span class="w"> </span><span class="k">inbounds</span><span class="w"> </span><span class="p">[</span><span class="m">0</span><span class="w"> </span><span class="k">x</span><span class="w"> </span><span class="kt">i8</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="m">0</span><span class="w"> </span><span class="k">x</span><span class="w"> </span><span class="kt">i8</span><span class="p">]</span><span class="w"> </span><span class="k">addrspace</span><span class="p">(</span><span class="m">3</span><span class="p">)*</span><span class="w"> </span><span class="vg">@SYCL_generated_kernel.shared_mem</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv">%local_ptr_offset</span>
+<span class="w">  </span><span class="nv">%new_local_ptr2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">getelementptr</span><span class="w"> </span><span class="k">inbounds</span><span class="w"> </span><span class="p">[</span><span class="m">0</span><span class="w"> </span><span class="k">x</span><span class="w"> </span><span class="kt">i8</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="m">0</span><span class="w"> </span><span class="k">x</span><span class="w"> </span><span class="kt">i8</span><span class="p">]</span><span class="w"> </span><span class="k">addrspace</span><span class="p">(</span><span class="m">3</span><span class="p">)*</span><span class="w"> </span><span class="vg">@SYCL_generated_kernel.shared_mem</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv">%local_ptr_offset2</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">load</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="k">addrspace</span><span class="p">(</span><span class="m">3</span><span class="p">)*</span><span class="w"> </span><span class="nv">%new_local_ptr</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">load</span><span class="w"> </span><span class="kt">i64</span><span class="p">,</span><span class="w"> </span><span class="kt">i64</span><span class="w"> </span><span class="k">addrspace</span><span class="p">(</span><span class="m">3</span><span class="p">)*</span><span class="w"> </span><span class="nv">%new_local_ptr2</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>On the runtime side, when setting local memory arguments, the CUDA PI
@@ -633,14 +659,15 @@ the accumulated size of used local memory. This approach preserves the existing
 PI interface.</p>
 </section>
 <section id="global-offset-support">
-<h5>Global offset support<a class="headerlink" href="#global-offset-support" title="Permalink to this headline">¶</a></h5>
+<h5>Global offset support<a class="headerlink" href="#global-offset-support" title="Link to this heading">¶</a></h5>
 <p>The CUDA API does not natively support the global offset parameter
 expected by the SYCL.</p>
-<p>In order to emulate this and make generated kernel compliant, an
-intrinsic <code class="docutils literal notranslate"><span class="pre">llvm.nvvm.implicit.offset</span></code> (clang builtin
-<code class="docutils literal notranslate"><span class="pre">__builtin_ptx_implicit_offset</span></code>) was introduced materializing the use
-of this implicit parameter for the NVPTX backend. The intrinsic returns
-a pointer to <code class="docutils literal notranslate"><span class="pre">i32</span></code> referring to a 3 elements array.</p>
+<p>In order to emulate this and make generated kernel compliant, an intrinsic
+<code class="docutils literal notranslate"><span class="pre">llvm.nvvm.implicit.offset</span></code> (clang builtin <code class="docutils literal notranslate"><span class="pre">__builtin_ptx_implicit_offset</span></code>) was
+introduced materializing the use of this implicit parameter for the NVPTX
+backend. AMDGCN uses the same approach with <code class="docutils literal notranslate"><span class="pre">llvm.amdgpu.implicit.offset</span></code> and
+<code class="docutils literal notranslate"><span class="pre">__builtin_amdgcn_implicit_offset</span></code>. The intrinsic returns a pointer to <code class="docutils literal notranslate"><span class="pre">i32</span></code>
+referring to a 3 elements array.</p>
 <p>Each non-kernel function reaching the implicit offset intrinsic in the
 call graph is augmented with an extra implicit parameter of type
 pointer to <code class="docutils literal notranslate"><span class="pre">i32</span></code>. Kernels calling one of these functions using
@@ -658,73 +685,101 @@ on the following logic:</p>
 <ul class="simple">
 <li><p>If the 2 versions exist, the original kernel is called if global
 offset is 0 otherwise it will call the cloned one and pass the
-offset by value;</p></li>
+offset by value (for CUDA backend), or by ref for AMD;</p></li>
 <li><p>If only 1 function exist, it is assumed that the kernel makes no use
 of this parameter and therefore ignores it.</p></li>
 </ul>
 <p>As an example, the following code:</p>
-<div class="highlight-LLVM notranslate"><div class="highlight"><pre><span></span>declare i32* @llvm.nvvm.implicit.offset()
+<div class="highlight-LLVM notranslate"><div class="highlight"><pre><span></span><span class="k">declare</span><span class="w"> </span><span class="kt">i32</span><span class="p">*</span><span class="w"> </span><span class="vg">@llvm.nvvm.implicit.offset</span><span class="p">()</span>
 
-define weak_odr dso_local i64 @other_function() {
-  %1 = tail call i32* @llvm.nvvm.implicit.offset()
-  %2 = getelementptr inbounds i32, i32* %1, i64 2
-  %3 = load i32, i32* %2, align 4
-  %4 = zext i32 %3 to i64
-  ret i64 %4
-}
+<span class="k">define</span><span class="w"> </span><span class="k">weak_odr</span><span class="w"> </span><span class="k">dso_local</span><span class="w"> </span><span class="kt">i64</span><span class="w"> </span><span class="vg">@other_function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">tail</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="kt">i32</span><span class="p">*</span><span class="w"> </span><span class="vg">@llvm.nvvm.implicit.offset</span><span class="p">()</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">getelementptr</span><span class="w"> </span><span class="k">inbounds</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="p">*</span><span class="w"> </span><span class="nv nv-Anonymous">%1</span><span class="p">,</span><span class="w"> </span><span class="kt">i64</span><span class="w"> </span><span class="m">2</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">load</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="p">*</span><span class="w"> </span><span class="nv nv-Anonymous">%2</span><span class="p">,</span><span class="w"> </span><span class="k">align</span><span class="w"> </span><span class="m">4</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%4</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">zext</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv nv-Anonymous">%3</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="kt">i64</span>
+<span class="w">  </span><span class="k">ret</span><span class="w"> </span><span class="kt">i64</span><span class="w"> </span><span class="nv nv-Anonymous">%4</span>
+<span class="p">}</span>
 
-define weak_odr dso_local void @other_function2() {
-  ret
-}
+<span class="k">define</span><span class="w"> </span><span class="k">weak_odr</span><span class="w"> </span><span class="k">dso_local</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="vg">@other_function2</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">ret</span>
+<span class="p">}</span>
 
-define weak_odr dso_local void @example_kernel() {
-entry:
-  %0 = call i64 @other_function()
-  call void @other_function2()
-  ret void
-}
+<span class="k">define</span><span class="w"> </span><span class="k">weak_odr</span><span class="w"> </span><span class="k">dso_local</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="vg">@example_kernel</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="nl">entry:</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="kt">i64</span><span class="w"> </span><span class="vg">@other_function</span><span class="p">()</span>
+<span class="w">  </span><span class="k">call</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="vg">@other_function2</span><span class="p">()</span>
+<span class="w">  </span><span class="k">ret</span><span class="w"> </span><span class="k">void</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Is transformed into this:</p>
-<div class="highlight-LLVM notranslate"><div class="highlight"><pre><span></span>define weak_odr dso_local i64 @other_function(i32* %0) {
-  %2 = getelementptr inbounds i32, i32* %0, i64 2
-  %3 = load i32, i32* %2, align 4
-  %4 = zext i32 %3 to i64
+<div class="highlight-LLVM notranslate"><div class="highlight"><pre><span></span><span class="k">define</span><span class="w"> </span><span class="k">weak_odr</span><span class="w"> </span><span class="k">dso_local</span><span class="w"> </span><span class="kt">i64</span><span class="w"> </span><span class="vg">@other_function</span><span class="p">(</span><span class="kt">i32</span><span class="p">*</span><span class="w"> </span><span class="nv nv-Anonymous">%0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">getelementptr</span><span class="w"> </span><span class="k">inbounds</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="p">*</span><span class="w"> </span><span class="nv nv-Anonymous">%0</span><span class="p">,</span><span class="w"> </span><span class="kt">i64</span><span class="w"> </span><span class="m">2</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">load</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="p">*</span><span class="w"> </span><span class="nv nv-Anonymous">%2</span><span class="p">,</span><span class="w"> </span><span class="k">align</span><span class="w"> </span><span class="m">4</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%4</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">zext</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="nv nv-Anonymous">%3</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="kt">i64</span>
 
-  ret i64 %4
-}
+<span class="w">  </span><span class="k">ret</span><span class="w"> </span><span class="kt">i64</span><span class="w"> </span><span class="nv nv-Anonymous">%4</span>
+<span class="p">}</span>
 
-define weak_odr dso_local void @example_kernel() {
-entry:
-  %0 = alloca [3 x i32], align 4
-  %1 = bitcast [3 x i32]* %0 to i8*
-  call void @llvm.memset.p0i8.i64(i8* nonnull align 4 dereferenceable(12) %1, i8 0, i64 12, i1 false)
-  %2 = getelementptr inbounds [3 x i32], [3 x i32]* %0, i32 0, i32 0
-  %3 = call i64 @other_function(i32* %2)
-  call void @other_function2()
-  ret void
-}
+<span class="k">define</span><span class="w"> </span><span class="k">weak_odr</span><span class="w"> </span><span class="k">dso_local</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="vg">@example_kernel</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="nl">entry:</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">alloca</span><span class="w"> </span><span class="p">[</span><span class="m">3</span><span class="w"> </span><span class="k">x</span><span class="w"> </span><span class="kt">i32</span><span class="p">],</span><span class="w"> </span><span class="k">align</span><span class="w"> </span><span class="m">4</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">bitcast</span><span class="w"> </span><span class="p">[</span><span class="m">3</span><span class="w"> </span><span class="k">x</span><span class="w"> </span><span class="kt">i32</span><span class="p">]*</span><span class="w"> </span><span class="nv nv-Anonymous">%0</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="kt">i8</span><span class="p">*</span>
+<span class="w">  </span><span class="k">call</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="vg">@llvm.memset.p0i8.i64</span><span class="p">(</span><span class="kt">i8</span><span class="p">*</span><span class="w"> </span><span class="k">nonnull</span><span class="w"> </span><span class="k">align</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="k">dereferenceable</span><span class="p">(</span><span class="m">12</span><span class="p">)</span><span class="w"> </span><span class="nv nv-Anonymous">%1</span><span class="p">,</span><span class="w"> </span><span class="kt">i8</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="kt">i64</span><span class="w"> </span><span class="m">12</span><span class="p">,</span><span class="w"> </span><span class="kt">i1</span><span class="w"> </span><span class="k">false</span><span class="p">)</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">getelementptr</span><span class="w"> </span><span class="k">inbounds</span><span class="w"> </span><span class="p">[</span><span class="m">3</span><span class="w"> </span><span class="k">x</span><span class="w"> </span><span class="kt">i32</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="m">3</span><span class="w"> </span><span class="k">x</span><span class="w"> </span><span class="kt">i32</span><span class="p">]*</span><span class="w"> </span><span class="nv nv-Anonymous">%0</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="m">0</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="kt">i64</span><span class="w"> </span><span class="vg">@other_function</span><span class="p">(</span><span class="kt">i32</span><span class="p">*</span><span class="w"> </span><span class="nv nv-Anonymous">%2</span><span class="p">)</span>
+<span class="w">  </span><span class="k">call</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="vg">@other_function2</span><span class="p">()</span>
+<span class="w">  </span><span class="k">ret</span><span class="w"> </span><span class="k">void</span>
+<span class="p">}</span>
 
-define weak_odr dso_local void @example_kernel_with_offset([3 x i32]* byval([3 x i32]) %0) {
-entry:
-  %1 = bitcast [3 x i32]* %0 to i32*
-  %2 = call i64 @other_function(i32* %1)
-  call void @other_function2()
-  ret void
-}
+<span class="k">define</span><span class="w"> </span><span class="k">weak_odr</span><span class="w"> </span><span class="k">dso_local</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="vg">@example_kernel_with_offset</span><span class="p">([</span><span class="m">3</span><span class="w"> </span><span class="k">x</span><span class="w"> </span><span class="kt">i32</span><span class="p">]*</span><span class="w"> </span><span class="k">byval</span><span class="p">([</span><span class="m">3</span><span class="w"> </span><span class="k">x</span><span class="w"> </span><span class="kt">i32</span><span class="p">])</span><span class="w"> </span><span class="nv nv-Anonymous">%0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="nl">entry:</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">bitcast</span><span class="w"> </span><span class="p">[</span><span class="m">3</span><span class="w"> </span><span class="k">x</span><span class="w"> </span><span class="kt">i32</span><span class="p">]*</span><span class="w"> </span><span class="nv nv-Anonymous">%0</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="kt">i32</span><span class="p">*</span>
+<span class="w">  </span><span class="nv nv-Anonymous">%2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">call</span><span class="w"> </span><span class="kt">i64</span><span class="w"> </span><span class="vg">@other_function</span><span class="p">(</span><span class="kt">i32</span><span class="p">*</span><span class="w"> </span><span class="nv nv-Anonymous">%1</span><span class="p">)</span>
+<span class="w">  </span><span class="k">call</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="vg">@other_function2</span><span class="p">()</span>
+<span class="w">  </span><span class="k">ret</span><span class="w"> </span><span class="k">void</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Note: Kernel naming is not fully stable for now.</p>
 </section>
+<section id="kernel-fusion-support">
+<h5>Kernel Fusion Support<a class="headerlink" href="#kernel-fusion-support" title="Link to this heading">¶</a></h5>
+<p>The <a class="reference download internal" download="" href="../_downloads/ef6f454a79280bf309403adfe95bbe26/sycl_ext_codeplay_kernel_fusion.asciidoc"><span class="xref download myst">experimental kernel fusion
+extension</span></a>
+also supports the CUDA and HIP backends. However, as the CUBIN, PTX and AMD assembly
+are not suitable input formats for the <a class="reference internal" href="KernelFusionJIT.html"><span class="std std-doc">kernel fusion JIT compiler</span></a>, a
+suitable IR has to be added as an additional device binary.</p>
+<p>Therefore, in case kernel fusion should be performed for the CUDA or HIP backends, the
+user needs to specify the additional flag <code class="docutils literal notranslate"><span class="pre">-fsycl-embed-ir</span></code> during compilation,
+to add LLVM IR as an additional device binary. When the flag <code class="docutils literal notranslate"><span class="pre">-fsycl-embed-ir</span></code>
+is specified, the LLVM IR produced by Clang for the CUDA/HIP backend device
+compilation is added to the fat binary file. To this end, the resulting
+file-table from <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> is additionally passed to the
+<code class="docutils literal notranslate"><span class="pre">clang-offload-wrapper</span></code>, creating a wrapper object with target <code class="docutils literal notranslate"><span class="pre">llvm_nvptx64</span></code>
+for the CUDA backend and <code class="docutils literal notranslate"><span class="pre">llvm_amdgcn</span></code> for the HIP backend.</p>
+<p>This device binary in LLVM IR format can be retrieved by the SYCL runtime and
+used by the kernel fusion JIT compiler. For the CUDA backend, the resulting fused
+kernel is compiled to PTX assembly by the kernel fusion JIT compiler at runtime.
+For the HIP backend, the resulting fused kernel is compiled to an AMDGCN binary
+by the kernel fusion JIT compiler at runtime, however this output requires
+finalization by <code class="docutils literal notranslate"><span class="pre">lld</span></code>. Rather than adding another dependancy to the fusion jit,
+a <code class="docutils literal notranslate"><span class="pre">Requires</span> <span class="pre">finalization</span></code> property is added the binary. The HIP
+PI plugin/UR adapter will then use the AMD Compiler Object Manager library
+(<code class="docutils literal notranslate"><span class="pre">comgr</span></code>, part of the ROCm package) in order to finalize it into
+a loadable format.</p>
+<p>Note that the device binary in LLVM IR does not replace the device binary in
+target format, but is embed in addition to it.</p>
+</section>
 </section>
 </section>
 <section id="integration-with-spir-v-format">
-<h3>Integration with SPIR-V format<a class="headerlink" href="#integration-with-spir-v-format" title="Permalink to this headline">¶</a></h3>
+<h3>Integration with SPIR-V format<a class="headerlink" href="#integration-with-spir-v-format" title="Link to this heading">¶</a></h3>
 <p>This section explains how to generate SPIR-V specific types and operations from
 C++ classes and functions.</p>
 <p>Translation of SYCL C++ programs to the code executable on heterogeneous
 systems can be considered as three step process:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>translation of SYCL C++ programs into LLVM IR</p></li>
 <li><p>translation from LLVM IR to SPIR-V</p></li>
 <li><p>translation from SPIR-V to machine code</p></li>
@@ -751,7 +806,7 @@ no canonical form of special built-in types and operations in LLVM IR, moreover
 we can’t re-use existing representation generated by OpenCL C front-end
 compiler. For instance, here is how <code class="docutils literal notranslate"><span class="pre">OpGroupAsyncCopy</span></code> operation looks in LLVM
 IR produced by OpenCL C front-end compiler.</p>
-<div class="highlight-LLVM notranslate"><div class="highlight"><pre><span></span><span class="vg">@_Z21async_work_group_copyPU3AS3fPU3AS1Kfjj</span><span class="p">(</span><span class="kt">float</span> <span class="k">addrspace</span><span class="p">(</span><span class="m">3</span><span class="p">)*,</span> <span class="kt">float</span> <span class="k">addrspace</span><span class="p">(</span><span class="m">1</span><span class="p">)*,</span> <span class="k">i32</span><span class="p">,</span> <span class="k">i32</span><span class="p">)</span>
+<div class="highlight-LLVM notranslate"><div class="highlight"><pre><span></span><span class="vg">@_Z21async_work_group_copyPU3AS3fPU3AS1Kfjj</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="k">addrspace</span><span class="p">(</span><span class="m">3</span><span class="p">)*,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="k">addrspace</span><span class="p">(</span><span class="m">1</span><span class="p">)*,</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="kt">i32</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>It’s a regular function, which can conflict with user code produced from C++
@@ -765,7 +820,7 @@ prototype:</p>
 <p>Our solution re-uses OpenCL data types like sampler, event, image types, etc,
 but we use different spelling to avoid potential conflicts with C++ code.
 Spelling convention for the OpenCL types enabled in SYCL mode is:</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">__ocl_</span><span class="o">&lt;</span><span class="n">OpenCL_type_name</span><span class="o">&gt;</span> <span class="c1">// e.g. __ocl_sampler_t, __ocl_event_t</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">__ocl_</span><span class="o">&lt;</span><span class="n">OpenCL_type_name</span><span class="o">&gt;</span><span class="w"> </span><span class="c1">// e.g. __ocl_sampler_t, __ocl_event_t</span>
 </pre></div>
 </div>
 <p>Operations using OpenCL types use special naming convention described in this
@@ -781,19 +836,19 @@ exceptions</p></li>
 </ul>
 <p>For example, the following C++ code is successfully recognized and translated
 into SPIR-V operation <code class="docutils literal notranslate"><span class="pre">OpGroupAsyncCopy</span></code>:</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">dataT</span><span class="o">&gt;</span>
-<span class="k">extern</span> <span class="n">__ocl_event_t</span>
-<span class="n">__spirv_OpGroupAsyncCopy</span><span class="p">(</span><span class="kt">int32_t</span> <span class="n">Scope</span><span class="p">,</span> <span class="n">__local</span> <span class="n">dataT</span> <span class="o">*</span><span class="n">Dest</span><span class="p">,</span>
-                         <span class="n">__global</span> <span class="n">dataT</span> <span class="o">*</span><span class="n">Src</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">NumElements</span><span class="p">,</span>
-                         <span class="kt">size_t</span> <span class="n">Stride</span><span class="p">,</span> <span class="n">__ocl_event_t</span> <span class="n">E</span><span class="p">)</span> <span class="k">noexcept</span><span class="p">;</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">dataT</span><span class="o">&gt;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">__ocl_event_t</span>
+<span class="n">__spirv_OpGroupAsyncCopy</span><span class="p">(</span><span class="kt">int32_t</span><span class="w"> </span><span class="n">Scope</span><span class="p">,</span><span class="w"> </span><span class="n">__local</span><span class="w"> </span><span class="n">dataT</span><span class="w"> </span><span class="o">*</span><span class="n">Dest</span><span class="p">,</span>
+<span class="w">                         </span><span class="n">__global</span><span class="w"> </span><span class="n">dataT</span><span class="w"> </span><span class="o">*</span><span class="n">Src</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">NumElements</span><span class="p">,</span>
+<span class="w">                         </span><span class="kt">size_t</span><span class="w"> </span><span class="n">Stride</span><span class="p">,</span><span class="w"> </span><span class="n">__ocl_event_t</span><span class="w"> </span><span class="n">E</span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
 
-<span class="n">__ocl_event_t</span> <span class="n">e</span> <span class="o">=</span>
-  <span class="n">__spirv_OpGroupAsyncCopy</span><span class="p">(</span><span class="n">cl</span><span class="o">::</span><span class="n">__spirv</span><span class="o">::</span><span class="n">Scope</span><span class="o">::</span><span class="n">Workgroup</span><span class="p">,</span>
-                           <span class="n">dst</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">numElements</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">E</span><span class="p">);</span>
+<span class="n">__ocl_event_t</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span>
+<span class="w">  </span><span class="n">__spirv_OpGroupAsyncCopy</span><span class="p">(</span><span class="n">cl</span><span class="o">::</span><span class="n">__spirv</span><span class="o">::</span><span class="n">Scope</span><span class="o">::</span><span class="n">Workgroup</span><span class="p">,</span>
+<span class="w">                           </span><span class="n">dst</span><span class="p">,</span><span class="w"> </span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">numElements</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">E</span><span class="p">);</span>
 </pre></div>
 </div>
 <section id="some-details-and-agreements-on-using-spir-v-special-types-and-operations">
-<h4>Some details and agreements on using SPIR-V special types and operations<a class="headerlink" href="#some-details-and-agreements-on-using-spir-v-special-types-and-operations" title="Permalink to this headline">¶</a></h4>
+<h4>Some details and agreements on using SPIR-V special types and operations<a class="headerlink" href="#some-details-and-agreements-on-using-spir-v-special-types-and-operations" title="Link to this heading">¶</a></h4>
 <p>The SPIR-V specific C++ enumerators and classes are declared in the file:
 <code class="docutils literal notranslate"><span class="pre">sycl/include/CL/__spirv/spirv_types.hpp</span></code>.</p>
 <p>The SPIR-V specific C++ function declarations are in the file:
@@ -803,7 +858,7 @@ into SPIR-V operation <code class="docutils literal notranslate"><span class="pr
 </section>
 </section>
 <section id="address-spaces-handling">
-<h3>Address spaces handling<a class="headerlink" href="#address-spaces-handling" title="Permalink to this headline">¶</a></h3>
+<h3>Address spaces handling<a class="headerlink" href="#address-spaces-handling" title="Link to this heading">¶</a></h3>
 <p>SYCL specification uses C++ classes to represent pointers to disjoint memory
 regions on an accelerator to enable compilation with standard C++ toolchain and
 SYCL compiler toolchain.</p>
@@ -811,24 +866,24 @@ SYCL compiler toolchain.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// check that SYCL mode is ON and we can use non-standard decorations</span>
 <span class="cp">#if defined(__SYCL_DEVICE_ONLY__)</span>
 <span class="c1">// GPU/accelerator implementation</span>
-<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">address_space</span> <span class="n">AS</span><span class="o">&gt;</span> <span class="k">class</span> <span class="nc">multi_ptr</span> <span class="p">{</span>
-  <span class="c1">// DecoratedType applies corresponding address space attribute to the type T</span>
-  <span class="c1">// DecoratedType&lt;T, global_space&gt;::type == &quot;__attribute__((opencl_global)) T&quot;</span>
-  <span class="c1">// See sycl/include/CL/sycl/access/access.hpp for more details</span>
-  <span class="k">using</span> <span class="n">pointer_t</span> <span class="o">=</span> <span class="k">typename</span> <span class="n">DecoratedType</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">AS</span><span class="o">&gt;::</span><span class="n">type</span> <span class="o">*</span><span class="p">;</span>
- 
-  <span class="n">pointer_t</span> <span class="n">m_Pointer</span><span class="p">;</span>
-  <span class="k">public</span><span class="o">:</span>
-  <span class="n">pointer_t</span> <span class="n">get</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">m_Pointer</span><span class="p">;</span> <span class="p">}</span>
-  <span class="n">T</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">*</span> <span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">T</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">m_Pointer</span><span class="p">);</span> <span class="p">}</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="n">address_space</span><span class="w"> </span><span class="n">AS</span><span class="o">&gt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">multi_ptr</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// DecoratedType applies corresponding address space attribute to the type T</span>
+<span class="w">  </span><span class="c1">// DecoratedType&lt;T, global_space&gt;::type == &quot;__attribute__((opencl_global)) T&quot;</span>
+<span class="w">  </span><span class="c1">// See sycl/include/sycl/access/access.hpp for more details</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">pointer_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">DecoratedType</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">AS</span><span class="o">&gt;::</span><span class="n">type</span><span class="w"> </span><span class="o">*</span><span class="p">;</span>
+
+<span class="w">  </span><span class="n">pointer_t</span><span class="w"> </span><span class="n">m_Pointer</span><span class="p">;</span>
+<span class="w">  </span><span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="n">pointer_t</span><span class="w"> </span><span class="n">get</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">m_Pointer</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">T</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">m_Pointer</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
 <span class="p">}</span>
 <span class="cp">#else</span>
 <span class="c1">// CPU/host implementation</span>
-<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">address_space</span> <span class="n">AS</span><span class="o">&gt;</span> <span class="k">class</span> <span class="nc">multi_ptr</span> <span class="p">{</span>
-  <span class="n">T</span> <span class="o">*</span><span class="n">m_Pointer</span><span class="p">;</span> <span class="c1">// regular undecorated pointer</span>
-  <span class="k">public</span><span class="o">:</span>
-  <span class="n">T</span> <span class="o">*</span><span class="n">get</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">m_Pointer</span><span class="p">;</span> <span class="p">}</span>
-  <span class="n">T</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">*</span> <span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="o">*</span><span class="n">m_Pointer</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="n">address_space</span><span class="w"> </span><span class="n">AS</span><span class="o">&gt;</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">multi_ptr</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="n">m_Pointer</span><span class="p">;</span><span class="w"> </span><span class="c1">// regular undecorated pointer</span>
+<span class="w">  </span><span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="n">get</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">m_Pointer</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">m_Pointer</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 <span class="p">}</span>
 <span class="cp">#endif</span>
 </pre></div>
@@ -847,38 +902,38 @@ two important features: keeps the type system consistent with C++ on one hand
 and enable tools for emitting device code aligned with SPIR memory model (and
 other GPU targets).</p>
 <p>So inside a function, this variable declaration:</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">var</span><span class="p">;</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">var</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>DPC++ turn into</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span>VarDecl  var &#39;int&#39;
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">VarDecl</span><span class="w">  </span><span class="n">var</span><span class="w"> </span><span class="err">&#39;</span><span class="kt">int</span><span class="err">&#39;</span>
 </pre></div>
 </div>
 <p>OpenCL compiler turn into</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span>VarDecl  var &#39;__private int&#39;
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">VarDecl</span><span class="w">  </span><span class="n">var</span><span class="w"> </span><span class="err">&#39;</span><span class="n">__private</span><span class="w"> </span><span class="kt">int</span><span class="err">&#39;</span>
 </pre></div>
 </div>
 <p>Changing variable type has massive and destructive effect in C++. For instance
 this does not compile in C++ for OpenCL mode:</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T1</span><span class="p">,</span> <span class="k">typename</span> <span class="n">T2</span><span class="o">&gt;</span>
-<span class="k">struct</span> <span class="n">is_same</span> <span class="p">{</span>
-    <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T1</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">T2</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">is_same</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">};</span>
 
-<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
-<span class="k">struct</span> <span class="n">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
-    <span class="k">static</span> <span class="k">constexpr</span> <span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">is_same</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
 
-<span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">int</span> <span class="n">p</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">static_assert</span><span class="p">(</span><span class="n">is_same</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="s">&quot;int is not an int?&quot;</span><span class="p">);</span> <span class="c1">// Fails: p is &#39;__private int&#39; != &#39;int&#39;</span>
-    <span class="k">static_assert</span><span class="p">(</span><span class="n">is_same</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="o">&amp;</span><span class="n">p</span><span class="p">),</span> <span class="kt">int</span><span class="o">*&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="s">&quot;int* is not an int*?&quot;</span><span class="p">);</span>  <span class="c1">// Fails: p is &#39;__private int*&#39; != &#39;__generic int*&#39;</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">static_assert</span><span class="p">(</span><span class="n">is_same</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">p</span><span class="p">),</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;int is not an int?&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Fails: p is &#39;__private int&#39; != &#39;int&#39;</span>
+<span class="w">    </span><span class="k">static_assert</span><span class="p">(</span><span class="n">is_same</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="o">&amp;</span><span class="n">p</span><span class="p">),</span><span class="w"> </span><span class="kt">int</span><span class="o">*&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;int* is not an int*?&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Fails: p is &#39;__private int*&#39; != &#39;__generic int*&#39;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>To utilize existing clang’s functionality, we re-use following OpenCL address
 space attributes in SYCL mode:</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Address space attribute</p></th>
 <th class="head"><p>SYCL address_space enumeration</p></th>
@@ -913,16 +968,16 @@ with any other address space (including default).</p>
 </div></blockquote>
 </section>
 <section id="compiler-runtime-interface">
-<h3>Compiler/Runtime interface<a class="headerlink" href="#compiler-runtime-interface" title="Permalink to this headline">¶</a></h3>
+<h3>Compiler/Runtime interface<a class="headerlink" href="#compiler-runtime-interface" title="Link to this heading">¶</a></h3>
 </section>
 </section>
 <section id="dpc-runtime-architecture">
-<h2>DPC++ Runtime architecture<a class="headerlink" href="#dpc-runtime-architecture" title="Permalink to this headline">¶</a></h2>
+<h2>DPC++ Runtime architecture<a class="headerlink" href="#dpc-runtime-architecture" title="Link to this heading">¶</a></h2>
 <p><em>TBD</em></p>
 </section>
 <section id="dpc-language-extensions-to-sycl">
-<h2>DPC++ Language extensions to SYCL<a class="headerlink" href="#dpc-language-extensions-to-sycl" title="Permalink to this headline">¶</a></h2>
-<p>List of language extensions can be found at <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/design/../extensions"><span class="xref myst">extensions</span></a></p>
+<h2>DPC++ Language extensions to SYCL<a class="headerlink" href="#dpc-language-extensions-to-sycl" title="Link to this heading">¶</a></h2>
+<p>List of language extensions can be found at <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/doc/extensions/">extensions</a></p>
 </section>
 </section>
 
@@ -941,8 +996,8 @@ with any other address space (including default).</p>
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2022, Intel Corporation.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

@@ -1,0 +1,27 @@
+var ompat_2math_8hpp =
+[
+    [ "vectorized_binary", "classsyclcompat_1_1detail_1_1vectorized__binary.html", "classsyclcompat_1_1detail_1_1vectorized__binary" ],
+    [ "abs", "structsyclcompat_1_1abs.html", "structsyclcompat_1_1abs" ],
+    [ "abs_diff", "structsyclcompat_1_1abs__diff.html", "structsyclcompat_1_1abs__diff" ],
+    [ "add_sat", "structsyclcompat_1_1add__sat.html", "structsyclcompat_1_1add__sat" ],
+    [ "rhadd", "structsyclcompat_1_1rhadd.html", "structsyclcompat_1_1rhadd" ],
+    [ "hadd", "structsyclcompat_1_1hadd.html", "structsyclcompat_1_1hadd" ],
+    [ "maximum", "structsyclcompat_1_1maximum.html", "structsyclcompat_1_1maximum" ],
+    [ "minimum", "structsyclcompat_1_1minimum.html", "structsyclcompat_1_1minimum" ],
+    [ "sub_sat", "structsyclcompat_1_1sub__sat.html", "structsyclcompat_1_1sub__sat" ],
+    [ "SYCL_EXT_ONEAPI_COMPLEX", "ompat_2math_8hpp.html#a6b48bded63fb2dfc065766b1ff13c436", null ],
+    [ "complex_type", "ompat_2math_8hpp.html#a446feed90819e64f91c981bb08e57506", null ],
+    [ "cabs", "ompat_2math_8hpp.html#a3c10c27d44679e0ae2829cb48ab76d14", null ],
+    [ "cdiv", "ompat_2math_8hpp.html#a98ca4eb5a166e3a49c085c9445fef3c3", null ],
+    [ "cmul", "ompat_2math_8hpp.html#aedacf06b344702068bd0e09261dda844", null ],
+    [ "conj", "ompat_2math_8hpp.html#a74bdeb6e393e3bb3493787eafef19dca", null ],
+    [ "fast_length", "ompat_2math_8hpp.html#a3ae74a23f7ffa7b31650daee0412f2b8", null ],
+    [ "length", "ompat_2math_8hpp.html#ac5204b4194f5c613a63ff91f28d31a44", null ],
+    [ "vectorized_binary", "ompat_2math_8hpp.html#ad2f7af0ba11c7e398732af5088e033f1", null ],
+    [ "vectorized_isgreater", "ompat_2math_8hpp.html#aecfca16dc6307a92959d4d7ef76337cc", null ],
+    [ "vectorized_isgreater< sycl::ushort2, unsigned >", "ompat_2math_8hpp.html#a801c669031ba0dc847fe933f8640fe81", null ],
+    [ "vectorized_max", "ompat_2math_8hpp.html#a31a2a3d5e07d4bb8b20f2309f2827105", null ],
+    [ "vectorized_min", "ompat_2math_8hpp.html#a9cbf81d995e76936eb645775f69ba31e", null ],
+    [ "vectorized_sum_abs_diff", "ompat_2math_8hpp.html#ae5c6ea6f042442a0e6b83406d3be7f47", null ],
+    [ "vectorized_unary", "ompat_2math_8hpp.html#ad16b88222d07913e646022d54682371d", null ]
+];

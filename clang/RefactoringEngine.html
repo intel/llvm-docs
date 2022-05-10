@@ -1,25 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Clang’s refactoring engine &#8212; Clang 15.0.0git documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <title>Clang’s refactoring engine &#8212; Clang 19.0.0git documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=e491ac2d" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+    <script src="_static/documentation_options.js?v=f778a350"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Overview" href="ClangTools.html" />
     <link rel="prev" title="JSON Compilation Database Format Specification" href="JSONCompilationDatabase.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="index.html">
-          <span>Clang 15.0.0git documentation</span></a></h1>
+          <span>Clang 19.0.0git documentation</span></a></h1>
         <h2 class="heading"><span>Clang’s refactoring engine</span></h2>
       </div>
       <div class="topnav" role="navigation" aria-label="top navigation">
@@ -37,7 +36,7 @@
         
         
   <section id="clang-s-refactoring-engine">
-<h1>Clang’s refactoring engine<a class="headerlink" href="#clang-s-refactoring-engine" title="Permalink to this headline">¶</a></h1>
+<h1>Clang’s refactoring engine<a class="headerlink" href="#clang-s-refactoring-engine" title="Link to this heading">¶</a></h1>
 <p>This document describes the design of Clang’s refactoring engine and provides
 a couple of examples that show how various primitives in the refactoring API
 can be used to implement different refactoring actions. The <a class="reference internal" href="LibTooling.html"><span class="doc">LibTooling</span></a>
@@ -52,7 +51,7 @@ query ASTs for some particular nodes.</p>
 to the Clang AST</span></a> if you want to learn more
 about how the AST is structured.</p>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
 <p>Clang’s refactoring engine defines a set refactoring actions that implement
 a number of different source transformations. The <code class="docutils literal notranslate"><span class="pre">clang-refactor</span></code>
 command-line tool can be used to perform these refactorings. Certain
@@ -63,23 +62,23 @@ operations (rules). These rules are grouped under a common umbrella - a single
 provides the action’s command name and description to <code class="docutils literal notranslate"><span class="pre">clang-refactor</span></code>.
 Each action must implement the <code class="docutils literal notranslate"><span class="pre">RefactoringAction</span></code> interface. Here’s an
 outline of a <code class="docutils literal notranslate"><span class="pre">local-rename</span></code> action:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">LocalRename</span> <span class="k">final</span> <span class="o">:</span> <span class="k">public</span> <span class="n">RefactoringAction</span> <span class="p">{</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">LocalRename</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">RefactoringAction</span><span class="w"> </span><span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-  <span class="n">StringRef</span> <span class="n">getCommand</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&quot;local-rename&quot;</span><span class="p">;</span> <span class="p">}</span>
+<span class="w">  </span><span class="n">StringRef</span><span class="w"> </span><span class="n">getCommand</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;local-rename&quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 
-  <span class="n">StringRef</span> <span class="n">getDescription</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="s">&quot;Finds and renames symbols in code with no indexer support&quot;</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="w">  </span><span class="n">StringRef</span><span class="w"> </span><span class="n">getDescription</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Finds and renames symbols in code with no indexer support&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 
-  <span class="n">RefactoringActionRules</span> <span class="n">createActionRules</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span>
-    <span class="p">...</span>
-  <span class="p">}</span>
+<span class="w">  </span><span class="n">RefactoringActionRules</span><span class="w"> </span><span class="n">createActionRules</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">};</span>
 </pre></div>
 </div>
 </section>
 <section id="refactoring-action-rules">
-<h2>Refactoring Action Rules<a class="headerlink" href="#refactoring-action-rules" title="Permalink to this headline">¶</a></h2>
+<h2>Refactoring Action Rules<a class="headerlink" href="#refactoring-action-rules" title="Link to this heading">¶</a></h2>
 <p>An individual refactoring action is responsible for creating the set of
 grouped refactoring action rules that represent one refactoring operation.
 Although the rules in one action may have a number of different implementations,
@@ -101,7 +100,7 @@ select the enum declaration instead). The clang-refactor tool will then analyze
 the selection and other options passed to the refactoring action, and will pick
 the most appropriate rule for the given selection and other options.</p>
 <section id="rule-types">
-<h3>Rule Types<a class="headerlink" href="#rule-types" title="Permalink to this headline">¶</a></h3>
+<h3>Rule Types<a class="headerlink" href="#rule-types" title="Link to this heading">¶</a></h3>
 <p>Clang’s refactoring engine supports several different refactoring rules:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">SourceChangeRefactoringRule</span></code> produces source replacements that are applied
@@ -128,7 +127,7 @@ work for you.</p></li>
 </ol>
 </section>
 <section id="how-to-create-a-rule">
-<h3>How to Create a Rule<a class="headerlink" href="#how-to-create-a-rule" title="Permalink to this headline">¶</a></h3>
+<h3>How to Create a Rule<a class="headerlink" href="#how-to-create-a-rule" title="Link to this heading">¶</a></h3>
 <p>Once you determine which type of rule is suitable for your needs you can
 implement the refactoring by subclassing the rule and implementing its
 interface. The subclass should have a constructor that takes the inputs that
@@ -136,19 +135,19 @@ are needed to perform the refactoring. For example, if you want to implement a
 rule that simply deletes a selection, you should create a subclass of
 <code class="docutils literal notranslate"><span class="pre">SourceChangeRefactoringRule</span></code> with a constructor that accepts the selection
 range:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DeleteSelectedRange</span> <span class="k">final</span> <span class="o">:</span> <span class="k">public</span> <span class="n">SourceChangeRefactoringRule</span> <span class="p">{</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">DeleteSelectedRange</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">SourceChangeRefactoringRule</span><span class="w"> </span><span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-  <span class="n">DeleteSelection</span><span class="p">(</span><span class="n">SourceRange</span> <span class="n">Selection</span><span class="p">)</span> <span class="o">:</span> <span class="n">Selection</span><span class="p">(</span><span class="n">Selection</span><span class="p">)</span> <span class="p">{}</span>
+<span class="w">  </span><span class="n">DeleteSelection</span><span class="p">(</span><span class="n">SourceRange</span><span class="w"> </span><span class="n">Selection</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Selection</span><span class="p">(</span><span class="n">Selection</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
 
-  <span class="n">Expected</span><span class="o">&lt;</span><span class="n">AtomicChanges</span><span class="o">&gt;</span>
-  <span class="n">createSourceReplacements</span><span class="p">(</span><span class="n">RefactoringRuleContext</span> <span class="o">&amp;</span><span class="n">Context</span><span class="p">)</span> <span class="k">override</span> <span class="p">{</span>
-    <span class="n">AtomicChange</span> <span class="n">Replacement</span><span class="p">(</span><span class="n">Context</span><span class="p">.</span><span class="n">getSources</span><span class="p">(),</span> <span class="n">Selection</span><span class="p">.</span><span class="n">getBegin</span><span class="p">());</span>
-    <span class="n">Replacement</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">Context</span><span class="p">.</span><span class="n">getSource</span><span class="p">,</span>
-                        <span class="n">CharSourceRange</span><span class="o">::</span><span class="n">getCharRange</span><span class="p">(</span><span class="n">Selection</span><span class="p">),</span> <span class="s">&quot;&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="p">{</span> <span class="n">Replacement</span> <span class="p">};</span>
-  <span class="p">}</span>
+<span class="w">  </span><span class="n">Expected</span><span class="o">&lt;</span><span class="n">AtomicChanges</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="n">createSourceReplacements</span><span class="p">(</span><span class="n">RefactoringRuleContext</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Context</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">AtomicChange</span><span class="w"> </span><span class="nf">Replacement</span><span class="p">(</span><span class="n">Context</span><span class="p">.</span><span class="n">getSources</span><span class="p">(),</span><span class="w"> </span><span class="n">Selection</span><span class="p">.</span><span class="n">getBegin</span><span class="p">());</span>
+<span class="w">    </span><span class="n">Replacement</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">Context</span><span class="p">.</span><span class="n">getSource</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">CharSourceRange</span><span class="o">::</span><span class="n">getCharRange</span><span class="p">(</span><span class="n">Selection</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Replacement</span><span class="w"> </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="k">private</span><span class="o">:</span>
-  <span class="n">SourceRange</span> <span class="n">Selection</span><span class="p">;</span>
+<span class="w">  </span><span class="n">SourceRange</span><span class="w"> </span><span class="n">Selection</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -156,10 +155,10 @@ range:</p>
 rules for a particular action using the <code class="docutils literal notranslate"><span class="pre">createRefactoringActionRule</span></code>
 function. For example, the class that’s shown above can be added to the
 list of action rules using the following code:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RefactoringActionRules</span> <span class="n">Rules</span><span class="p">;</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">RefactoringActionRules</span><span class="w"> </span><span class="n">Rules</span><span class="p">;</span>
 <span class="n">Rules</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span>
-  <span class="n">createRefactoringActionRule</span><span class="o">&lt;</span><span class="n">DeleteSelectedRange</span><span class="o">&gt;</span><span class="p">(</span>
-        <span class="n">SourceRangeSelectionRequirement</span><span class="p">())</span>
+<span class="w">  </span><span class="n">createRefactoringActionRule</span><span class="o">&lt;</span><span class="n">DeleteSelectedRange</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">        </span><span class="n">SourceRangeSelectionRequirement</span><span class="p">())</span>
 <span class="p">);</span>
 </pre></div>
 </div>
@@ -172,7 +171,7 @@ requirements that can be used to construct a refactoring action rule.</p>
 </section>
 </section>
 <section id="refactoring-action-rule-requirements">
-<h2>Refactoring Action Rule Requirements<a class="headerlink" href="#refactoring-action-rule-requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Refactoring Action Rule Requirements<a class="headerlink" href="#refactoring-action-rule-requirements" title="Link to this heading">¶</a></h2>
 <p>A refactoring action rule requirement is a value whose type derives from the
 <code class="docutils literal notranslate"><span class="pre">RefactoringActionRuleRequirement</span></code> class. The type must define an
 <code class="docutils literal notranslate"><span class="pre">evaluate</span></code> member function that returns a value of type <code class="docutils literal notranslate"><span class="pre">Expected&lt;...&gt;</span></code>.
@@ -205,7 +204,7 @@ that allows users to input these options without ever invoking the
 action.</p></li>
 </ul>
 <section id="selection-requirements">
-<h3>Selection Requirements<a class="headerlink" href="#selection-requirements" title="Permalink to this headline">¶</a></h3>
+<h3>Selection Requirements<a class="headerlink" href="#selection-requirements" title="Link to this heading">¶</a></h3>
 <p>The refactoring rule requirements that require some form of source selection
 are listed below:</p>
 <ul class="simple">
@@ -217,7 +216,7 @@ that case).</p></li>
 </ul>
 </section>
 <section id="other-requirements">
-<h3>Other Requirements<a class="headerlink" href="#other-requirements" title="Permalink to this headline">¶</a></h3>
+<h3>Other Requirements<a class="headerlink" href="#other-requirements" title="Link to this heading">¶</a></h3>
 <p>There are several other requirements types that can be used when creating
 a refactoring rule:</p>
 <ul class="simple">
@@ -231,19 +230,19 @@ how they can be used when creating a rule.</p></li>
 </section>
 </section>
 <section id="refactoring-options">
-<h2>Refactoring Options<a class="headerlink" href="#refactoring-options" title="Permalink to this headline">¶</a></h2>
+<h2>Refactoring Options<a class="headerlink" href="#refactoring-options" title="Link to this heading">¶</a></h2>
 <p>Refactoring options are values that affect a refactoring operation and are
 specified either using command-line options or another client-specific
 mechanism. Options should be created using a class that derives either from
 the <code class="docutils literal notranslate"><span class="pre">OptionalRequiredOption</span></code> or <code class="docutils literal notranslate"><span class="pre">RequiredRefactoringOption</span></code>. The following
 example shows how one can created a required string option that corresponds to
 the <code class="docutils literal notranslate"><span class="pre">-new-name</span></code> command-line option in clang-refactor:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NewNameOption</span> <span class="o">:</span> <span class="k">public</span> <span class="n">RequiredRefactoringOption</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="p">{</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">NewNameOption</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">RequiredRefactoringOption</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-  <span class="n">StringRef</span> <span class="n">getName</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&quot;new-name&quot;</span><span class="p">;</span> <span class="p">}</span>
-  <span class="n">StringRef</span> <span class="n">getDescription</span><span class="p">()</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="s">&quot;The new name to change the symbol to&quot;</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="w">  </span><span class="n">StringRef</span><span class="w"> </span><span class="n">getName</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;new-name&quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="n">StringRef</span><span class="w"> </span><span class="n">getDescription</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;The new name to change the symbol to&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -251,8 +250,8 @@ the <code class="docutils literal notranslate"><span class="pre">-new-name</span
 a requirement for a refactoring rule using a requirement like
 <code class="docutils literal notranslate"><span class="pre">OptionRequirement</span></code>:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">createRefactoringActionRule</span><span class="o">&lt;</span><span class="n">RenameOccurrences</span><span class="o">&gt;</span><span class="p">(</span>
-  <span class="p">...,</span>
-  <span class="n">OptionRequirement</span><span class="o">&lt;</span><span class="n">NewNameOption</span><span class="o">&gt;</span><span class="p">())</span>
+<span class="w">  </span><span class="p">...,</span>
+<span class="w">  </span><span class="n">OptionRequirement</span><span class="o">&lt;</span><span class="n">NewNameOption</span><span class="o">&gt;</span><span class="p">())</span>
 <span class="p">);</span>
 </pre></div>
 </div>
@@ -274,8 +273,8 @@ a requirement for a refactoring rule using a requirement like
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2022, The Clang Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2007-2024, The Clang Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

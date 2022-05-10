@@ -1,0 +1,28 @@
+var classsycl_1_1__V1_1_1detail_1_1LeavesCollection =
+[
+    [ "IteratorT", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection_1_1IteratorT.html", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection_1_1IteratorT" ],
+    [ "AllocateDependencyF", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a924d93b5b75a49fe05931c695956af48", null ],
+    [ "const_iterator", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#ae01dbb2b83698c451d02b450b6703846", null ],
+    [ "const_pointer", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a8c851e6b68f2a6ad1d42a91d679f5140", null ],
+    [ "const_reference", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a112e9eebfa73b70d7c39a620e2642939", null ],
+    [ "EnqueueListT", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#ad09cbdb6fef9f484e2bcb0197b46c0d9", null ],
+    [ "GenericCommandsT", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a103f68b4ea8263b61400c7c8870619d2", null ],
+    [ "HostAccessorCommandsT", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a3f475b0c2593d8ef8c513313e5ff15bd", null ],
+    [ "iterator", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#ad04197b31a228e05fc8efe2c23876656", null ],
+    [ "pointer", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a7729d6a90caf95b706fd115fb7cf2b98", null ],
+    [ "reference", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a10bf6e0997558587c7b8ce67c47214d0", null ],
+    [ "value_type", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a0c41a2bccfc4860c21e4f11a565bb771", null ],
+    [ "LeavesCollection", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a5dc7b532f931e588c8cca89515d61e2e", null ],
+    [ "begin", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#ac5b2492ef0d0ebed669d4d72b8fb26db", null ],
+    [ "cbegin", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a657eb3b077deaa17b10d29f4648005d7", null ],
+    [ "cend", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#ad8b67b6e83a7f574b74a1b267df5d162", null ],
+    [ "end", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a7b0591973aeff80a2ba5f3f1ad0b8afa", null ],
+    [ "genericCommandsCapacity", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a40795e20dc77d108cdbcdbcfa11187ae", null ],
+    [ "getGenericCommands", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a47cc266e380482a041ce858c8189e0e5", null ],
+    [ "getHostAccessorCommands", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#abd138cf4b202f6012a5df4004f77ce36", null ],
+    [ "push_back", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a83b44bba9ccb209b04f05755d4726e30", null ],
+    [ "remove", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a769953d4006006ae0bbb90a686c64ae6", null ],
+    [ "toVector", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#ac12f92fc722bc9ea9da808f5c022919d", null ],
+    [ "IteratorT< false >", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#ae46b1bead845d8cebe3d2714426dc02f", null ],
+    [ "IteratorT< true >", "classsycl_1_1__V1_1_1detail_1_1LeavesCollection.html#a6251821995a6fed156815fcb68ee7d65", null ]
+];

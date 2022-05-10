@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1joint__matrix__mad__impl_3_01T1_00_01T2_00_01M_00adaeb594bb81cc7caeeb356c5fb20d2e =
-[
-    [ "mad", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1joint__matrix__mad__impl_3_01T1_00_01T2_00_01M_00adaeb594bb81cc7caeeb356c5fb20d2e.html#aba2e96c5e0af523adee0404a6af58a6e", null ]
-];

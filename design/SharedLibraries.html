@@ -1,18 +1,16 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Dynamic linking of device code &#8212; oneAPI DPC++ Compiler  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=e491ac2d" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Behavior for optional kernel features" href="OptionalDeviceFeatures.html" />
@@ -36,38 +34,38 @@
       <div class="content" role="main">
         
         
-  <section class="tex2jax_ignore mathjax_ignore" id="dynamic-linking-of-device-code">
-<h1>Dynamic linking of device code<a class="headerlink" href="#dynamic-linking-of-device-code" title="Permalink to this headline">¶</a></h1>
+  <section id="dynamic-linking-of-device-code">
+<h1>Dynamic linking of device code<a class="headerlink" href="#dynamic-linking-of-device-code" title="Link to this heading">¶</a></h1>
 <p>This document describes purpose and design of dynamic linking of device code
 feature.</p>
 <p><strong>NOTE</strong>: This is not a final version. The document is still in progress.</p>
 <section id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<h2>Background<a class="headerlink" href="#background" title="Link to this heading">¶</a></h2>
 <p>Sometimes users want to link device code dynamically at run time. One possible
 use case for such linkage - providing device functions via shared libraries.
 The example below shows how device function <code class="docutils literal notranslate"><span class="pre">LibDeviceFunc</span></code> can be dynamically
 linked to a SYCL app:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// app.cpp</span>
-<span class="n">SYCL_EXTERNAL</span> <span class="kt">int</span> <span class="nf">LibDeviceFunc</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">);</span>
+<span class="n">SYCL_EXTERNAL</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LibDeviceFunc</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
 
 <span class="cm">/* ... */</span>
-<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span> <span class="p">{</span>
-<span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(</span><span class="cm">/* ... */</span> <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">item</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">LibDeviceFunc</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">get_id</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
-<span class="p">});</span> <span class="cm">/* ... */</span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="w"> </span><span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(</span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">item</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LibDeviceFunc</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">get_id</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<span class="p">});</span><span class="w"> </span><span class="cm">/* ... */</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
 
 <span class="c1">// lib.cpp</span>
-<span class="n">SYCL_EXTERNAL</span> <span class="kt">int</span> <span class="nf">LibDeviceFunc</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+<span class="n">SYCL_EXTERNAL</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LibDeviceFunc</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="p">;</span> Commands
-clang++ -fsycl lib.cpp -shared -o helpers.so
-clang++ -fsycl app.cpp -lhelpers -o a.out
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="p">;</span><span class="w"> </span>Commands
+clang++<span class="w"> </span>-fsycl<span class="w"> </span>lib.cpp<span class="w"> </span>-shared<span class="w"> </span>-o<span class="w"> </span>libhelpers.so
+clang++<span class="w"> </span>-fsycl<span class="w"> </span>app.cpp<span class="w"> </span>-L.<span class="w"> </span>-lhelpers<span class="w"> </span>-o<span class="w"> </span>a.out
 ./a.out
-Output: <span class="m">0</span> <span class="m">2</span> <span class="m">4</span> <span class="m">6</span> ...
+Output:<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">6</span><span class="w"> </span>...
 </pre></div>
 </div>
 <p>The first invocation of <code class="docutils literal notranslate"><span class="pre">clang++</span></code> driver will create a “fat” shared library
@@ -84,14 +82,14 @@ workflow and requires some amount of source code boilerplate.</p>
 <p>Another possible scenario - use functions defined in a pre-compiled device image
 provided by the user. Example:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// a.cpp</span>
-<span class="n">SYCL_EXTERNAL</span> <span class="kt">void</span> <span class="nf">LibDeviceFunc</span><span class="p">();</span>
+<span class="n">SYCL_EXTERNAL</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">LibDeviceFunc</span><span class="p">();</span>
 <span class="p">...</span>
-<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">([]()</span> <span class="p">{</span> <span class="n">LibDeviceFunc</span><span class="p">();</span> <span class="p">});</span>
+<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="w"> </span><span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">([]()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">LibDeviceFunc</span><span class="p">();</span><span class="w"> </span><span class="p">});</span>
 <span class="p">});</span>
 
 <span class="c1">// b.cpp</span>
-<span class="cm">/*no SYCL_EXTERNAL*/</span> <span class="kt">void</span> <span class="nf">LibDeviceFunc</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<span class="cm">/*no SYCL_EXTERNAL*/</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">LibDeviceFunc</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>We have a <code class="docutils literal notranslate"><span class="pre">SYCL_EXTERNAL</span></code> function <code class="docutils literal notranslate"><span class="pre">LibDeviceFunc</span></code> called from a kernel, but the
@@ -103,7 +101,7 @@ allows to link device code dynamically at runtime, such as in the scenarios
 above.</p>
 </section>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
 <p>User’s device code can be compiled into some form and not linked statically with
 device code of application. It can be embedded as a device image into a shared
 library or supplied as a separate device image with attached properties. This
@@ -126,7 +124,7 @@ invocations of SYCL tools such as <code class="docutils literal notranslate"><sp
 Example how such API may look like:</p></li>
 </ul>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// suppose, mylib.spv defines SYCL_EXTERNAL function foo, then this call:</span>
-<span class="n">device_image</span> <span class="n">img</span> <span class="o">=</span> <span class="n">device_dlopen</span><span class="p">(</span><span class="s">&quot;mylib.spv&quot;</span><span class="p">);</span>
+<span class="n">device_image</span><span class="w"> </span><span class="n">img</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">device_dlopen</span><span class="p">(</span><span class="s">&quot;mylib.spv&quot;</span><span class="p">);</span>
 <span class="c1">// will make foo available for dynamic symbol resolution. If any subsequent</span>
 <span class="c1">// JIT compilations try to compile device code with external reference to</span>
 <span class="c1">// foo, it can now be resolved following the resolution mechanism described</span>
@@ -148,7 +146,7 @@ as close as possible to host shared libraries.</p></li>
 </ul>
 </section>
 <section id="design">
-<h2>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h2>
+<h2>Design<a class="headerlink" href="#design" title="Link to this heading">¶</a></h2>
 <p>The overall idea:</p>
 <ul class="simple">
 <li><p>Each device image is supplied with a list of imported and exported symbol
@@ -177,14 +175,14 @@ symbols.</p></li>
 </ul>
 <p>Next sections describe details of changes in each component.</p>
 <section id="dpc-front-end-changes">
-<h3>DPC++ front-end changes<a class="headerlink" href="#dpc-front-end-changes" title="Permalink to this headline">¶</a></h3>
+<h3>DPC++ front-end changes<a class="headerlink" href="#dpc-front-end-changes" title="Link to this heading">¶</a></h3>
 <p>Now during device code split process <code class="docutils literal notranslate"><span class="pre">SYCL_EXTERNAL</span></code> functions are
 considered as entry points (as well as kernels).
 For this purpose DPC++ front-end generates <code class="docutils literal notranslate"><span class="pre">module-id</span></code> attribute on each
 <code class="docutils literal notranslate"><span class="pre">SYCL_EXTERNAL</span></code> function.</p>
 </section>
 <section id="sycl-post-link-changes">
-<h3>sycl-post-link changes<a class="headerlink" href="#sycl-post-link-changes" title="Permalink to this headline">¶</a></h3>
+<h3>sycl-post-link changes<a class="headerlink" href="#sycl-post-link-changes" title="Link to this heading">¶</a></h3>
 <p>In order to support dynamic linking of device code, <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> performs
 2 main tasks:</p>
 <ul class="simple">
@@ -200,16 +198,16 @@ Example:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Shared library</span>
 
 <span class="c1">// A.cpp</span>
-<span class="n">SYCL_EXTERNAL</span> <span class="kt">int</span> <span class="nf">LibDeviceFunc</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+<span class="n">SYCL_EXTERNAL</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LibDeviceFunc</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">// B.cpp</span>
 <span class="cm">/* ... */</span>
-<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span> <span class="p">{</span>
-<span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(</span><span class="cm">/* ... */</span> <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">item</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">LibDeviceFunc</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">get_id</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
-<span class="p">}</span> <span class="cm">/* ... */</span>
+<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="w"> </span><span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(</span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">item</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LibDeviceFunc</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">get_id</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<span class="p">}</span><span class="w"> </span><span class="cm">/* ... */</span>
 </pre></div>
 </div>
 <p>If user requested per-source device code split, then for this shared library
@@ -265,30 +263,30 @@ split and it is performed on separated images.</p>
 <p>All collected information is attached to a device image via properties
 mechanism.</p>
 <p>Each device image is supplied with an array of property sets:</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">pi_device_binary_struct</span> <span class="p">{</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">pi_device_binary_struct</span><span class="w"> </span><span class="p">{</span>
 <span class="p">...</span>
-  <span class="c1">// Array of property sets</span>
-  <span class="n">pi_device_binary_property_set</span> <span class="n">PropertySetsBegin</span><span class="p">;</span>
-  <span class="n">pi_device_binary_property_set</span> <span class="n">PropertySetsEnd</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// Array of property sets</span>
+<span class="w">  </span><span class="n">pi_device_binary_property_set</span><span class="w"> </span><span class="n">PropertySetsBegin</span><span class="p">;</span>
+<span class="w">  </span><span class="n">pi_device_binary_property_set</span><span class="w"> </span><span class="n">PropertySetsEnd</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
 <p>Each property set is represented by the following struct:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Named array of properties.</span>
-<span class="k">struct</span> <span class="n">_pi_device_binary_property_set_struct</span> <span class="p">{</span>
-  <span class="kt">char</span> <span class="o">*</span><span class="n">Name</span><span class="p">;</span>                                <span class="c1">// the name</span>
-  <span class="n">pi_device_binary_property</span> <span class="n">PropertiesBegin</span><span class="p">;</span> <span class="c1">// array start</span>
-  <span class="n">pi_device_binary_property</span> <span class="n">PropertiesEnd</span><span class="p">;</span>   <span class="c1">// array end</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">_pi_device_binary_property_set_struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">Name</span><span class="p">;</span><span class="w">                                </span><span class="c1">// the name</span>
+<span class="w">  </span><span class="n">pi_device_binary_property</span><span class="w"> </span><span class="n">PropertiesBegin</span><span class="p">;</span><span class="w"> </span><span class="c1">// array start</span>
+<span class="w">  </span><span class="n">pi_device_binary_property</span><span class="w"> </span><span class="n">PropertiesEnd</span><span class="p">;</span><span class="w">   </span><span class="c1">// array end</span>
 <span class="p">};</span>
 </pre></div>
 </div>
 <p>It contains name of property set and array of properties. Each property is
 represented by the following struct:</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">_pi_device_binary_property_struct</span> <span class="p">{</span>
-  <span class="kt">char</span> <span class="o">*</span><span class="n">Name</span><span class="p">;</span>       <span class="c1">// null-terminated property name</span>
-  <span class="kt">void</span> <span class="o">*</span><span class="n">ValAddr</span><span class="p">;</span>    <span class="c1">// address of property value</span>
-  <span class="kt">uint32_t</span> <span class="n">Type</span><span class="p">;</span>    <span class="c1">// _pi_property_type</span>
-  <span class="kt">uint64_t</span> <span class="n">ValSize</span><span class="p">;</span> <span class="c1">// size of property value in bytes</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">_pi_device_binary_property_struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">Name</span><span class="p">;</span><span class="w">       </span><span class="c1">// null-terminated property name</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">ValAddr</span><span class="p">;</span><span class="w">    </span><span class="c1">// address of property value</span>
+<span class="w">  </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">Type</span><span class="p">;</span><span class="w">    </span><span class="c1">// _pi_property_type</span>
+<span class="w">  </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">ValSize</span><span class="p">;</span><span class="w"> </span><span class="c1">// size of property value in bytes</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -300,7 +298,7 @@ List of exported symbols is represented in the same way, except the
 corresponding set has the name <code class="docutils literal notranslate"><span class="pre">SYCL/exported</span> <span class="pre">symbols</span></code>.</p>
 </section>
 <section id="dpc-runtime-changes">
-<h3>DPC++ runtime changes<a class="headerlink" href="#dpc-runtime-changes" title="Permalink to this headline">¶</a></h3>
+<h3>DPC++ runtime changes<a class="headerlink" href="#dpc-runtime-changes" title="Link to this heading">¶</a></h3>
 <p>DPC++ RT performs <em>device images collection</em> task by grouping all device
 images required to execute a kernel based on the list of exports/imports, creates
 programs using collected images and links them together using PI API.
@@ -308,7 +306,7 @@ Resulting program is then added to the cache to avoid repetition of symbol
 resolution, compilation, and linking processes for any future attempts to invoke
 kernels defined by this program.</p>
 <section id="dpc-runtime-plugin-interface-pi-changes">
-<h4>DPC++ runtime plugin interface (PI) changes<a class="headerlink" href="#dpc-runtime-plugin-interface-pi-changes" title="Permalink to this headline">¶</a></h4>
+<h4>DPC++ runtime plugin interface (PI) changes<a class="headerlink" href="#dpc-runtime-plugin-interface-pi-changes" title="Link to this heading">¶</a></h4>
 <p>During <em>device images collection</em> process RT considers modules as available for
 linking using information about ability of chosen device backend to compile
 and link programs created from particular device image format. The information
@@ -318,7 +316,7 @@ by PI plugin implementation for concrete backend. For this purpose
 RT PI device extension is defined. Each extension is a string that can be
 returned by <code class="docutils literal notranslate"><span class="pre">piDeviceGetInfo</span></code> call with query <code class="docutils literal notranslate"><span class="pre">PI_DEVICE_INFO_EXTENSIONS</span></code>.
 Mapping of extension strings and formats that can be linked:</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Device image format</p></th>
 <th class="head"><p>Extension string</p></th>
@@ -349,7 +347,7 @@ Depending on concrete plugin implementation and set of device image formats that
 can be linked at run-time, <code class="docutils literal notranslate"><span class="pre">piProgramLink</span></code> API may receive programs made from
 device images in different formats as inputs (including SPIR-V and native code).</p>
 <section id="support-of-runtime-linking-in-backends">
-<h5>Support of runtime linking in backends<a class="headerlink" href="#support-of-runtime-linking-in-backends" title="Permalink to this headline">¶</a></h5>
+<h5>Support of runtime linking in backends<a class="headerlink" href="#support-of-runtime-linking-in-backends" title="Link to this heading">¶</a></h5>
 <ul class="simple">
 <li><p>The initial implementation will support dynamic linking of device code in SPIR-V
 format on OpenCL backend:</p>
@@ -377,7 +375,7 @@ compiler and allows to reduce JIT overhead</p></li>
 </section>
 </section>
 <section id="device-images-collection-and-linking">
-<h4>Device images collection and linking<a class="headerlink" href="#device-images-collection-and-linking" title="Permalink to this headline">¶</a></h4>
+<h4>Device images collection and linking<a class="headerlink" href="#device-images-collection-and-linking" title="Link to this heading">¶</a></h4>
 <p>Device images collection and linking of programs is performed by DPC++ Runtime
 class named <code class="docutils literal notranslate"><span class="pre">ProgramManager</span></code>.</p>
 <p>When the program manager gets a request to create a program object using device
@@ -403,7 +401,7 @@ of defined symbols. If this assumption is not correct, there can be two cases:</
 device image is taken to use duplicated symbol</p></li>
 <li><p>Same symbols have different definitions. In this case ODR violation takes
 place, such situation leads to undefined behaviour. For more details refer
-to <a class="reference external" href="#ODR-violations">ODR violations</a> section.</p>
+to <a class="reference internal" href="#odr-violations">ODR violations</a> section.</p>
 <ul>
 <li><p>The situation when two device images of different formats define the same
 symbols with two different definitions is not considered as ODR violation.
@@ -415,28 +413,28 @@ In this case the suitable device image will be picked.</p></li>
 during search.</p>
 </section>
 <section id="program-caching">
-<h4>Program caching<a class="headerlink" href="#program-caching" title="Permalink to this headline">¶</a></h4>
+<h4>Program caching<a class="headerlink" href="#program-caching" title="Link to this heading">¶</a></h4>
 <p>Existing support for device code caching can be re-used to cache
 dynamically linked programs with slight changes.</p>
 <section id="in-memory-cache">
-<h5>In-memory cache<a class="headerlink" href="#in-memory-cache" title="Permalink to this headline">¶</a></h5>
+<h5>In-memory cache<a class="headerlink" href="#in-memory-cache" title="Link to this heading">¶</a></h5>
 <p>The existing mechanism of caching can be re-used in presence of dynamic
 linking. Example of code when caching mechanism is successfully re-used for
 dynamically linked code:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Application</span>
-<span class="n">SYCL_EXTERNAL</span> <span class="kt">void</span> <span class="nf">LibFunc</span><span class="p">();</span>
+<span class="n">SYCL_EXTERNAL</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">LibFunc</span><span class="p">();</span>
 
-<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="n">InternalKernel</span><span class="o">&gt;</span><span class="p">(</span> <span class="p">...</span> <span class="p">)</span>
-<span class="p">});</span> <span class="c1">// 1. Program is compiled, linked and saved in cache</span>
-    <span class="c1">// 2. Prepared program is used to enqueue kernel</span>
+<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="w"> </span><span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="n">InternalKernel</span><span class="o">&gt;</span><span class="p">(</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">)</span>
+<span class="p">});</span><span class="w"> </span><span class="c1">// 1. Program is compiled, linked and saved in cache</span>
+<span class="w">    </span><span class="c1">// 2. Prepared program is used to enqueue kernel</span>
 
-<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">handler</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">([]</span> <span class="p">{</span> <span class="n">LibFunc</span><span class="p">();</span> <span class="p">});</span> <span class="c1">// Prepared program is used to enqueue kernel</span>
+<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="w"> </span><span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">handler</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">([]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">LibFunc</span><span class="p">();</span><span class="w"> </span><span class="p">});</span><span class="w"> </span><span class="c1">// Prepared program is used to enqueue kernel</span>
 <span class="p">});</span>
 
 <span class="c1">// Library</span>
-<span class="n">SYCL_EXTERNAL</span> <span class="kt">void</span> <span class="nf">LibFunc</span><span class="p">()</span> <span class="p">{</span>
+<span class="n">SYCL_EXTERNAL</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">LibFunc</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="c1">// ...</span>
 <span class="p">}</span>
 </pre></div>
@@ -449,27 +447,27 @@ defines kernels and these kernels are run by the application unchanged cache
 structure may lead to double compilation of the same code. Example of code
 that leads to double compilation of library code:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Application</span>
-<span class="n">SYCL_EXTERNAL</span> <span class="kt">void</span> <span class="nf">LibFunc</span><span class="p">();</span>
+<span class="n">SYCL_EXTERNAL</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">LibFunc</span><span class="p">();</span>
 
-<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">handler</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">([]</span> <span class="p">{</span> <span class="n">LibFunc</span><span class="p">();</span> <span class="p">});</span>  <span class="c1">// Device code for library is</span>
-                                            <span class="c1">// compiled and linked together with</span>
-                                            <span class="c1">// device code for application, i.e.</span>
-                                            <span class="c1">// LibFunc1 and ExternalKernel exist</span>
-                                            <span class="c1">// in prepared state</span>
+<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="w"> </span><span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">handler</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">([]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">LibFunc</span><span class="p">();</span><span class="w"> </span><span class="p">});</span><span class="w">  </span><span class="c1">// Device code for library is</span>
+<span class="w">                                            </span><span class="c1">// compiled and linked together with</span>
+<span class="w">                                            </span><span class="c1">// device code for application, i.e.</span>
+<span class="w">                                            </span><span class="c1">// LibFunc1 and ExternalKernel exist</span>
+<span class="w">                                            </span><span class="c1">// in prepared state</span>
 <span class="p">});</span>
 <span class="c1">// ...</span>
-<span class="n">EnqueueLibraryKernel</span><span class="p">(</span><span class="n">Q</span><span class="p">);</span> <span class="c1">// If cache mechanism is not changed, this line will</span>
-                         <span class="c1">// lead to second compilation of ExternalKernel and</span>
-                         <span class="c1">// LibFunc</span>
+<span class="n">EnqueueLibraryKernel</span><span class="p">(</span><span class="n">Q</span><span class="p">);</span><span class="w"> </span><span class="c1">// If cache mechanism is not changed, this line will</span>
+<span class="w">                         </span><span class="c1">// lead to second compilation of ExternalKernel and</span>
+<span class="w">                         </span><span class="c1">// LibFunc</span>
 
 <span class="c1">// Library</span>
-<span class="n">SYCL_EXTERNAL</span> <span class="kt">void</span> <span class="nf">LibFunc</span><span class="p">()</span> <span class="p">{</span>
+<span class="n">SYCL_EXTERNAL</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">LibFunc</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="c1">// ...</span>
 <span class="p">}</span>
 
-<span class="n">EnqueueLibraryKernel</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">queue</span><span class="p">.</span><span class="n">submit</span><span class="p">(</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="n">ExternalKernel</span><span class="o">&gt;</span><span class="p">(...));</span>
+<span class="n">EnqueueLibraryKernel</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">queue</span><span class="p">.</span><span class="n">submit</span><span class="p">(</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="n">ExternalKernel</span><span class="o">&gt;</span><span class="p">(...));</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -495,11 +493,11 @@ Example of modified cache structure when dynamic linking is involved:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Application</span>
 <span class="c1">// OSModule = 1</span>
 
-<span class="n">SYCL_EXTERNAL</span> <span class="kt">void</span> <span class="nf">LibFunc</span><span class="p">();</span>
-<span class="n">queue</span><span class="p">.</span><span class="n">submit</span><span class="p">(</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="n">InternalKernel</span><span class="o">&gt;</span><span class="p">(</span> <span class="p">...</span> <span class="p">));</span>
+<span class="n">SYCL_EXTERNAL</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">LibFunc</span><span class="p">();</span>
+<span class="n">queue</span><span class="p">.</span><span class="n">submit</span><span class="p">(</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="n">InternalKernel</span><span class="o">&gt;</span><span class="p">(</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">));</span>
 
-<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">([]</span> <span class="p">{</span> <span class="n">LibFunc</span><span class="p">();</span> <span class="p">});</span>
+<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="w"> </span><span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">([]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">LibFunc</span><span class="p">();</span><span class="w"> </span><span class="p">});</span>
 <span class="p">});</span>
 
 <span class="n">EnqueueLibraryKernel</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
@@ -507,10 +505,10 @@ Example of modified cache structure when dynamic linking is involved:</p>
 <span class="c1">// Library</span>
 <span class="c1">// OSModule = 2</span>
 
-<span class="n">SYCL_EXTERNAL</span> <span class="nf">LibFunc</span><span class="p">();</span>
+<span class="n">SYCL_EXTERNAL</span><span class="w"> </span><span class="nf">LibFunc</span><span class="p">();</span>
 
-<span class="n">EnqueueLibraryKernel</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">queue</span><span class="p">.</span><span class="n">submit</span><span class="p">(</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="n">ExternalKernel</span><span class="o">&gt;</span><span class="p">(...));</span>
+<span class="n">EnqueueLibraryKernel</span><span class="p">(</span><span class="n">queue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">queue</span><span class="p">.</span><span class="n">submit</span><span class="p">(</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="n">ExternalKernel</span><span class="o">&gt;</span><span class="p">(...));</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -525,22 +523,22 @@ Example of modified cache structure when dynamic linking is involved:</p>
 <p>However the library code will be compiled twice if kernel from the library
 was enqueued before kernels from the application, i.e. in such case:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Application</span>
-<span class="n">SYCL_EXTERNAL</span> <span class="kt">void</span> <span class="nf">LibFunc</span><span class="p">();</span>
+<span class="n">SYCL_EXTERNAL</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">LibFunc</span><span class="p">();</span>
 
-<span class="n">EnqueueLibraryKernel</span><span class="p">(</span><span class="n">Q</span><span class="p">);</span> <span class="c1">// First, library code is compiled alone since it</span>
-                         <span class="c1">// doesn&#39;t have any dependencies</span>
+<span class="n">EnqueueLibraryKernel</span><span class="p">(</span><span class="n">Q</span><span class="p">);</span><span class="w"> </span><span class="c1">// First, library code is compiled alone since it</span>
+<span class="w">                         </span><span class="c1">// doesn&#39;t have any dependencies</span>
 <span class="c1">// ...</span>
-<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">handler</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">([]</span> <span class="p">{</span> <span class="n">LibFunc</span><span class="p">();</span> <span class="p">});</span>  <span class="c1">// Second, library code is compiled</span>
-                                            <span class="c1">// and linked together with code of</span>
-                                            <span class="c1">// the application</span>
+<span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="w"> </span><span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">handler</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">([]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">LibFunc</span><span class="p">();</span><span class="w"> </span><span class="p">});</span><span class="w">  </span><span class="c1">// Second, library code is compiled</span>
+<span class="w">                                            </span><span class="c1">// and linked together with code of</span>
+<span class="w">                                            </span><span class="c1">// the application</span>
 <span class="p">});</span>
 </pre></div>
 </div>
 <p>The kernel caching mechanism is re-used without changes.</p>
 </section>
 <section id="persistent-cache">
-<h5>Persistent cache<a class="headerlink" href="#persistent-cache" title="Permalink to this headline">¶</a></h5>
+<h5>Persistent cache<a class="headerlink" href="#persistent-cache" title="Link to this heading">¶</a></h5>
 <p>The documented approach to persistent cache needs to be expanded in presence
 of dynamic linking support. One of the identifiers for built image hash is
 hash made out of device image used as input for the JIT compilation.
@@ -558,12 +556,12 @@ to compare device images during sorting process.</p>
 </section>
 </section>
 <section id="corner-cases-and-limitations">
-<h2>Corner cases and limitations<a class="headerlink" href="#corner-cases-and-limitations" title="Permalink to this headline">¶</a></h2>
+<h2>Corner cases and limitations<a class="headerlink" href="#corner-cases-and-limitations" title="Link to this heading">¶</a></h2>
 <p>It is not guaranteed that behaviour of host shared libraries and device shared
 libraries will always match. There are several cases when behaviours don’t match,
 the next sections will cover details of such cases.</p>
 <section id="odr-violations">
-<h3>ODR violations<a class="headerlink" href="#odr-violations" title="Permalink to this headline">¶</a></h3>
+<h3>ODR violations<a class="headerlink" href="#odr-violations" title="Link to this heading">¶</a></h3>
 <p>C++ standard defines One Definition Rule as:</p>
 <blockquote>
 <div><p>Every program shall contain exactly one definition of every non-inline
@@ -587,7 +585,7 @@ in multiple definition errors.</p>
 <p>Given that, it is not guaranteed that behaviour of shared host libraries and
 shared device libraries will always match in case of such ODR violations.</p>
 <section id="ld-preload">
-<h4>LD_PRELOAD<a class="headerlink" href="#ld-preload" title="Permalink to this headline">¶</a></h4>
+<h4>LD_PRELOAD<a class="headerlink" href="#ld-preload" title="Link to this heading">¶</a></h4>
 <p>Another way to violate ODR is <code class="docutils literal notranslate"><span class="pre">LD_PRELOAD</span></code> environment variable on Linux. It
 allows to load specified shared library before any other shared libraries so it
 will be searched for symbols before other shared libraries. It allows to
@@ -612,7 +610,7 @@ substitution will cause multiple definition errors during runtime linking.</p>
 </section>
 </section>
 <section id="run-time-libraries-loading">
-<h3>Run-time libraries loading<a class="headerlink" href="#run-time-libraries-loading" title="Permalink to this headline">¶</a></h3>
+<h3>Run-time libraries loading<a class="headerlink" href="#run-time-libraries-loading" title="Link to this heading">¶</a></h3>
 <p>It is possible to load shared library during run-time. Both Linux and Windows
 provide a way to do so (for example <code class="docutils literal notranslate"><span class="pre">dlopen()</span></code> on Linux or <code class="docutils literal notranslate"><span class="pre">LoadLibrary</span></code> on
 Windows).
@@ -642,10 +640,10 @@ same name as one of the explicitly linked libraries.</p>
 </section>
 </section>
 <section id="related-links">
-<h2>Related links<a class="headerlink" href="#related-links" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
+<h2>Related links<a class="headerlink" href="#related-links" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
 <li><p>Test plan for this feature
-https://github.com/intel/llvm-test-suite/blob/intel/SYCL/TestPlans/DynamicLinkingTestPlan.md</p></li>
+https://github.com/intel/llvm/blob/sycl/sycl/test-e2e/TestPlans/DynamicLinkingTestPlan.md</p></li>
 </ol>
 </section>
 </section>
@@ -665,8 +663,8 @@ https://github.com/intel/llvm-test-suite/blob/intel/SYCL/TestPlans/DynamicLinkin
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2022, Intel Corporation.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

@@ -1,0 +1,27 @@
+var classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16 =
+[
+    [ "bfloat16", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#a021be27c069ce2b7330312eef6526620", null ],
+    [ "bfloat16", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#a59534de3dc78c38813d72da3e7ee5f48", null ],
+    [ "bfloat16", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#a78d2412761ee6ec308a7fc22dec07f70", null ],
+    [ "~bfloat16", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#a6d26ddb1186999fb16f80693826b7097", null ],
+    [ "bfloat16", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#a7bb0bf08c4d814d010ce9ea8ae41f019", null ],
+    [ "bfloat16", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#a1c73e31ed91df19cc47c0a2dcec61ef1", null ],
+    [ "operator bool", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#abc882699d1c6dc4935aa33a1902ccc7a", null ],
+    [ "operator float", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#a4fdb3304a69e270e3a1a5e6b824cc089", null ],
+    [ "operator sycl::half", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#a88e65f7b7fccfe4c21f392d10120dd1f", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#ae8ae40f24576b149c0c2c548ed1c4863", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#aee47317b12af75371ab2ff6421f4c866", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#aac73380f33f39ee392063c7c02380c98", null ],
+    [ "detail::bfloat16ToBits", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#a0db472419c5be6b86eec39c358e5268f", null ],
+    [ "detail::bitsToBfloat16", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#a35a1735a125a9e1b47eb3d73612669cf", null ],
+    [ "operator-", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#a6d11e758246624797644dc85b5293a38", null ],
+    [ "operator<<", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#a861aaddb9edd3708f3365ffa669e14b9", null ],
+    [ "operator>>", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#a839acb6b7636d5258f4518b1f5909da8", null ],
+    [ "sycl::vec< bfloat16, 1 >", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#acb2a5954fa25f48ac9b558c385ae7c60", null ],
+    [ "sycl::vec< bfloat16, 16 >", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#ae7f80e591fcbe8b54c5b684ba84235af", null ],
+    [ "sycl::vec< bfloat16, 2 >", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#ad576c97f290d7c92e9853978b2e42efc", null ],
+    [ "sycl::vec< bfloat16, 3 >", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#ab982bf44ec175455c04a5d1898da6ed4", null ],
+    [ "sycl::vec< bfloat16, 4 >", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#a358607dfae4358a7e7d3ddd05614b5de", null ],
+    [ "sycl::vec< bfloat16, 8 >", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#a76ece2e93faa52a3335a01f1d070fef1", null ],
+    [ "value", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html#aff1704193d006af5225eaab3162f1dd1", null ]
+];

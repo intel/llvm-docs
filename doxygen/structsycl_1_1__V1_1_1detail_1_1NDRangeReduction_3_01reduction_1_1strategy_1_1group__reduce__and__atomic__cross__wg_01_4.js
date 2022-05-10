@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1NDRangeReduction_3_01reduction_1_1strategy_1_1group__reduce__and__atomic__cross__wg_01_4 =
+[
+    [ "run", "structsycl_1_1__V1_1_1detail_1_1NDRangeReduction_3_01reduction_1_1strategy_1_1group__reduce__and__atomic__cross__wg_01_4.html#aac6839d2283320f1bd9368dfba1e79f9", null ]
+];

@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1wi__element_3_01uint16__t_00_01Nu214ebea3060f88ce235c5eab517aadd1 =
-[
-    [ "convert", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1wi__element_3_01uint16__t_00_01Nu214ebea3060f88ce235c5eab517aadd1.html#a86dfd822e2268d2b712238795c1e21f1", null ]
-];

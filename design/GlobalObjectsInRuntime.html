@@ -1,18 +1,16 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Global objects in DPC++ runtime &#8212; oneAPI DPC++ Compiler  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=e491ac2d" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Linked allocations" href="LinkedAllocations.html" />
@@ -36,10 +34,10 @@
       <div class="content" role="main">
         
         
-  <section class="tex2jax_ignore mathjax_ignore" id="global-objects-in-dpc-runtime">
-<h1>Global objects in DPC++ runtime<a class="headerlink" href="#global-objects-in-dpc-runtime" title="Permalink to this headline">¶</a></h1>
+  <section id="global-objects-in-dpc-runtime">
+<h1>Global objects in DPC++ runtime<a class="headerlink" href="#global-objects-in-dpc-runtime" title="Link to this heading">¶</a></h1>
 <section id="intro">
-<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
+<h2>Intro<a class="headerlink" href="#intro" title="Link to this heading">¶</a></h2>
 <p>C++ standard does not specify the order in which global objects are constructed
 or destroyed. If global objects somehow interact with each other, there’s a
 chance, that one of the objects has not been initialized or has been destroyed
@@ -51,12 +49,12 @@ constructed in the same order as they occur in code. Initialization order
 between translation units is undefined.</p>
 <p>At the same time, SYCL users may want to construct some SYCL objects globally,
 like in example below:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;CL/sycl.hpp&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;sycl/sycl.hpp&gt;</span>
 
 <span class="n">sycl</span><span class="p">::</span><span class="n">queue</span> <span class="n">Queue</span><span class="p">;</span>
 
 <span class="nb">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">Queue</span> <span class="o">=</span> <span class="n">sycl</span><span class="p">::</span><span class="n">queue</span><span class="p">{</span><span class="n">sycl</span><span class="p">::</span><span class="n">default_selector</span><span class="p">{}</span><span class="o">.</span><span class="n">select_device</span><span class="p">()};</span>
+  <span class="n">Queue</span> <span class="o">=</span> <span class="n">sycl</span><span class="p">::</span><span class="n">queue</span><span class="p">{</span><span class="n">sycl</span><span class="p">::</span><span class="n">default_selector_v</span><span class="p">};</span>
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -69,9 +67,9 @@ runtimes. To prevent crashes in such scenarios, the DPC++ runtime must ensure
 global objects lifetime is long enough.</p>
 </section>
 <section id="dpc-runtime">
-<h2>DPC++ runtime<a class="headerlink" href="#dpc-runtime" title="Permalink to this headline">¶</a></h2>
+<h2>DPC++ runtime<a class="headerlink" href="#dpc-runtime" title="Link to this heading">¶</a></h2>
 <section id="general-idea">
-<h3>General idea<a class="headerlink" href="#general-idea" title="Permalink to this headline">¶</a></h3>
+<h3>General idea<a class="headerlink" href="#general-idea" title="Link to this heading">¶</a></h3>
 <p>Different platforms may handle global initialization and deinitialization
 differently (for example, see <a class="reference external" href="https://itanium-cxx-abi.github.io/cxx-abi/abi.html#dso-dtor">Itanium ABI</a>). So, handling global objects
 lifetime is platform-dependent. However, there’s a common idea behind those
@@ -88,7 +86,7 @@ runtime frees memory pointed by <code class="docutils literal notranslate"><span
 destruction of nested <code class="docutils literal notranslate"><span class="pre">std::unique_ptr</span></code>s.</p>
 </section>
 <section id="linux">
-<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<h3>Linux<a class="headerlink" href="#linux" title="Link to this heading">¶</a></h3>
 <p>On Linux DPC++ runtime uses <code class="docutils literal notranslate"><span class="pre">__attribute__((destructor))</span></code> property with low
 priority value 110. This approach does not guarantee, that <code class="docutils literal notranslate"><span class="pre">GlobalHandler</span></code>
 destructor is the last thing to run, as user code may contain a similar function
@@ -102,14 +100,14 @@ memory. If user application uses <code class="docutils literal notranslate"><spa
 times, the memory leak may impact code performance.</p>
 </section>
 <section id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading">¶</a></h3>
 <p>To identify shutdown moment on Windows, DPC++ runtime uses default <code class="docutils literal notranslate"><span class="pre">DllMain</span></code>
 function with <code class="docutils literal notranslate"><span class="pre">DLL_PROCESS_DETACH</span></code> reason. This guarantees, that global objects
 deinitialization happens right before <code class="docutils literal notranslate"><span class="pre">sycl.dll</span></code> is unloaded from process
 address space.</p>
 </section>
 <section id="recommendations-for-dpc-runtime-developers">
-<h3>Recommendations for DPC++ runtime developers<a class="headerlink" href="#recommendations-for-dpc-runtime-developers" title="Permalink to this headline">¶</a></h3>
+<h3>Recommendations for DPC++ runtime developers<a class="headerlink" href="#recommendations-for-dpc-runtime-developers" title="Link to this heading">¶</a></h3>
 <p>There are a few things to keep in mind, when developing DPC++ runtime:</p>
 <ul class="simple">
 <li><p>It is fine to have global objects with trivial constructor and destructor.
@@ -123,7 +121,7 @@ constructor and destructor.</p></li>
 </section>
 </section>
 <section id="plugins">
-<h2>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h2>
+<h2>Plugins<a class="headerlink" href="#plugins" title="Link to this heading">¶</a></h2>
 <p>Plugin lifetime is managed by utilizing piPluginInit() and piTearDown().
 GlobalHandler::shutdown() will tear down all registered globals before SYCL RT
 library is unloaded. It will invoke piTearDown() and unload() for each
@@ -133,7 +131,7 @@ RT can control the beginning and the end of the plugin.</p>
 <p><img alt="" src="../_images/plugin-lifetime.jpg" /></p>
 </section>
 <section id="low-level-runtimes">
-<h2>Low-level runtimes<a class="headerlink" href="#low-level-runtimes" title="Permalink to this headline">¶</a></h2>
+<h2>Low-level runtimes<a class="headerlink" href="#low-level-runtimes" title="Link to this heading">¶</a></h2>
 <p>Generally, DPC++ runtime has no control over its dependencies. Such libraries
 can have global objects of their own. If you observe problems with dependency
 library, please, report it to library maintainers.</p>
@@ -155,8 +153,8 @@ library, please, report it to library maintainers.</p>
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2022, Intel Corporation.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

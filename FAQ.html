@@ -1,22 +1,20 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Frequently Asked Questions &#8212; oneAPI DPC++ Compiler  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=e491ac2d" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Environment Variables" href="EnvironmentVariables.html" />
-    <link rel="prev" title="CUDA crosslane vs OpenCL sub-groups" href="cuda/opencl-subgroup-vs-cuda-crosslane-op.html" /> 
+    <link rel="prev" title="SYCLcompat" href="syclcompat/README.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="index.html">
           <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
@@ -25,7 +23,7 @@
       <div class="topnav" role="navigation" aria-label="top navigation">
       
         <p>
-        «&#160;&#160;<a href="cuda/opencl-subgroup-vs-cuda-crosslane-op.html">CUDA crosslane vs OpenCL sub-groups</a>
+        «&#160;&#160;<a href="syclcompat/README.html">SYCLcompat</a>
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
@@ -36,34 +34,28 @@
       <div class="content" role="main">
         
         
-  <section class="tex2jax_ignore mathjax_ignore" id="frequently-asked-questions">
-<h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
+  <section id="frequently-asked-questions">
+<h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Link to this heading">¶</a></h1>
 <p><strong>Table of contents</strong></p>
-<ol class="simple">
-<li><p><a class="reference external" href="#developing-with-dpc">Developing with DPC++</a></p></li>
-<li><p><a class="reference external" href="#using-applications-built-with-dpc">Using applications built with DPC++</a></p></li>
-<li><p><a class="reference external" href="#common-issues">Common issues</a></p></li>
-<li><p><a class="reference external" href="#device-specific-questions-and-issues">Device specific questions and issues</a></p></li>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#developing-with-dpc">Developing with DPC++</a></p></li>
+<li><p><a class="reference internal" href="#using-applications-built-with-dpc">Using applications built with DPC++</a></p></li>
+<li><p><a class="reference internal" href="#common-issues">Common issues</a></p></li>
+<li><p><a class="reference internal" href="#device-specific-questions-and-issues">Device specific questions and issues</a></p></li>
 </ol>
 <section id="developing-with-dpc">
-<h2>Developing with DPC++<a class="headerlink" href="#developing-with-dpc" title="Permalink to this headline">¶</a></h2>
+<h2>Developing with DPC++<a class="headerlink" href="#developing-with-dpc" title="Link to this heading">¶</a></h2>
 <section id="q-what-do-i-need-to-start-developing-with-dpc">
-<h3>Q: What do I need to start developing with DPC++?<a class="headerlink" href="#q-what-do-i-need-to-start-developing-with-dpc" title="Permalink to this headline">¶</a></h3>
+<h3>Q: What do I need to start developing with DPC++?<a class="headerlink" href="#q-what-do-i-need-to-start-developing-with-dpc" title="Link to this heading">¶</a></h3>
 <p><strong>A:</strong> To get the full DPC++ experience you need oneAPI DPC++ compiler. DPC++
 compiler provides you with both host and device side compilation. Another
 requirement for code offloading to specialized devices is a compatible OpenCL
-runtime. Our <a class="reference internal" href="GetStartedGuide.html"><span class="doc std std-doc">Get Started Guide</span></a> will help you
+runtime. Our <a class="reference internal" href="GetStartedGuide.html"><span class="std std-doc">Get Started Guide</span></a> will help you
 set up a proper environment. To learn more about using the DPC++ compiler,
-please refer to <a class="reference internal" href="UsersManual.html"><span class="doc std std-doc">Users Manual</span></a>. If using a special compiler
-is not an option for you and/or you would like to experiment without offloading
-code to non-host devices, you can exploit SYCL’s host device feature. This
-gives you the ability to use any C++17 compiler. You will need to link your
-application with the DPC++ Runtime library and provide a path to the SYCL
-headers directory. Please, refer to your compiler manual to learn about
-specific build options.</p>
+please refer to <a class="reference internal" href="UsersManual.html"><span class="std std-doc">Users Manual</span></a>.</p>
 </section>
 <section id="q-how-are-dpc-compilation-phases-different-from-those-of-a-usual-c-compiler-can-i-customize-this-flow-for-my-applications">
-<h3>Q: How are DPC++ compilation phases different from those of a usual C++ compiler? Can I customize this flow for my applications?<a class="headerlink" href="#q-how-are-dpc-compilation-phases-different-from-those-of-a-usual-c-compiler-can-i-customize-this-flow-for-my-applications" title="Permalink to this headline">¶</a></h3>
+<h3>Q: How are DPC++ compilation phases different from those of a usual C++ compiler? Can I customize this flow for my applications?<a class="headerlink" href="#q-how-are-dpc-compilation-phases-different-from-those-of-a-usual-c-compiler-can-i-customize-this-flow-for-my-applications" title="Link to this heading">¶</a></h3>
 <p><strong>A:</strong> Due to the fact that both host and device code need to be compiled and
 linked into the final binary, the compilation steps sequence is more
 complicated compared to the usual C++ flow.</p>
@@ -78,7 +70,7 @@ specify the desired third-party compiler name. Usage example:</p>
 </pre></div>
 </div>
 <p>Implicitly, the above command would:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>turn to the DPC++ compiler for compiling the device code for the
 needed target(s) and generating dependencies (“integration files”) for
 the host side;</p></li>
@@ -90,25 +82,26 @@ into the final executable.</p></li>
 </ol>
 <p>To learn more about the compiler options mentioned, and the DPC++
 compiler command-line interface in general, please refer to the
-<a class="reference internal" href="UsersManual.html"><span class="doc std std-doc">DPC++ Compiler User Manual</span></a>.
+<a class="reference internal" href="UsersManual.html"><span class="std std-doc">DPC++ Compiler User Manual</span></a>.
 To learn more about the concepts behind this flow, and the DPC++
 Compiler internals as such, we welcome you to study our
-<a class="reference internal" href="design/CompilerAndRuntimeDesign.html"><span class="doc std std-doc">DPC++ Compiler and Runtime architecture design</span></a> document.</p>
+<a class="reference internal" href="design/CompilerAndRuntimeDesign.html"><span class="std std-doc">DPC++ Compiler and Runtime architecture design</span></a> document.</p>
 </section>
 </section>
 <section id="using-applications-built-with-dpc">
-<h2>Using applications built with DPC++<a class="headerlink" href="#using-applications-built-with-dpc" title="Permalink to this headline">¶</a></h2>
-<section id="q-what-happens-if-i-run-my-application-on-a-machine-without-opencl">
-<h3>Q: What happens if I run my application on a machine without OpenCL?<a class="headerlink" href="#q-what-happens-if-i-run-my-application-on-a-machine-without-opencl" title="Permalink to this headline">¶</a></h3>
-<p><strong>A:</strong> If you use the default SYCL device selector (or any other selector that
-allows host device), then a fallback to the host device will take place.
-Otherwise, an exception will be thrown.</p>
+<h2>Using applications built with DPC++<a class="headerlink" href="#using-applications-built-with-dpc" title="Link to this heading">¶</a></h2>
+<section id="q-what-happens-if-i-run-my-sycl-application-on-a-machine-without-a-supported-backend">
+<h3>Q: What happens if I run my SYCL application on a machine without a supported backend?<a class="headerlink" href="#q-what-happens-if-i-run-my-sycl-application-on-a-machine-without-a-supported-backend" title="Link to this heading">¶</a></h3>
+<p><strong>A:</strong> If a SYCL application is unable to find a suitable device, the SYCL
+objects (<code class="docutils literal notranslate"><span class="pre">sycl::context</span></code>, <code class="docutils literal notranslate"><span class="pre">sycl::queue</span></code>, etc.) or the SYCL device selector (See
+<a class="reference external" href="https://registry.khronos.org/SYCL/specs/sycl-2020/html/sycl-2020.html#sec:device-selection">SYCL 2020 specificaion 4.6.1.1</a>)
+will throw a <code class="docutils literal notranslate"><span class="pre">sycl::exception</span></code> with <code class="docutils literal notranslate"><span class="pre">errc::runtime</span></code> error code.</p>
 </section>
 </section>
 <section id="common-issues">
-<h2>Common issues<a class="headerlink" href="#common-issues" title="Permalink to this headline">¶</a></h2>
+<h2>Common issues<a class="headerlink" href="#common-issues" title="Link to this heading">¶</a></h2>
 <section id="q-dpc-application-complains-about-missing-libsycl-so-or-sycl-dll-library">
-<h3>Q: DPC++ application complains about missing libsycl.so (or sycl.dll) library.<a class="headerlink" href="#q-dpc-application-complains-about-missing-libsycl-so-or-sycl-dll-library" title="Permalink to this headline">¶</a></h3>
+<h3>Q: DPC++ application complains about missing libsycl.so (or sycl.dll) library.<a class="headerlink" href="#q-dpc-application-complains-about-missing-libsycl-so-or-sycl-dll-library" title="Link to this heading">¶</a></h3>
 <p>Linux:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./app
 $ ./app: error while loading shared libraries: libsycl.so: cannot open shared object file: No such file or directory
@@ -125,14 +118,14 @@ library is listed in the correct environment variable: <code class="docutils lit
 (for Linux) or <code class="docutils literal notranslate"><span class="pre">LIB</span></code> (for Windows).</p>
 </section>
 <section id="q-dpc-compiler-fails-to-compile-device-code-that-uses-std-functions">
-<h3>Q: DPC++ Compiler fails to compile device code that uses STD functions.<a class="headerlink" href="#q-dpc-compiler-fails-to-compile-device-code-that-uses-std-functions" title="Permalink to this headline">¶</a></h3>
+<h3>Q: DPC++ Compiler fails to compile device code that uses STD functions.<a class="headerlink" href="#q-dpc-compiler-fails-to-compile-device-code-that-uses-std-functions" title="Link to this heading">¶</a></h3>
 <p>Example error message:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>In file included from example.cpp:1:
-In file included from C:\compiler\lib\clang\10.0.0\include\CL/sycl.hpp:11:
-In file included from C:\compiler\lib\clang\10.0.0\include\CL/sycl/accessor.hpp:13:
-In file included from C:\compiler\lib\clang\10.0.0\include\CL/sycl/buffer.hpp:10:
-In file included from C:\compiler\lib\clang\10.0.0\include\CL/sycl/detail/buffer_impl.hpp:14:
-In file included from C:\compiler\lib\clang\10.0.0\include\CL/sycl/detail/aligned_allocator.hpp:16:
+In file included from C:\compiler\lib\clang\10.0.0\include\sycl/sycl.hpp:11:
+In file included from C:\compiler\lib\clang\10.0.0\include\sycl/accessor.hpp:13:
+In file included from C:\compiler\lib\clang\10.0.0\include\sycl/buffer.hpp:10:
+In file included from C:\compiler\lib\clang\10.0.0\include\sycl/detail/buffer_impl.hpp:14:
+In file included from C:\compiler\lib\clang\10.0.0\include\sycl/detail/aligned_allocator.hpp:16:
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.22.27905\include\algorithm(4493,9): error: SYCL kernel cannot call a
       dllimport function
         _STL_ASSERT(!(_Left &lt; _Right), &quot;invalid comparator&quot;);
@@ -163,31 +156,26 @@ C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\crtdbg.h(607,26
 beyond those explicitly mentioned as usable in kernels in this spec.</p>
 </div></blockquote>
 <p>Replace usage of STD built-ins with SYCL-defined math built-ins. Please, note
-that you have to explicitly specify built-in namespace (i.e. <code class="docutils literal notranslate"><span class="pre">cl::sycl::fmin</span></code>).
+that you have to explicitly specify built-in namespace (i.e. <code class="docutils literal notranslate"><span class="pre">sycl::fmin</span></code>).
 The full list of SYCL math built-ins is provided in section 4.13.3 of the
 specification.</p>
 </section>
 </section>
 <section id="device-specific-questions-and-issues">
-<h2>Device specific questions and issues<a class="headerlink" href="#device-specific-questions-and-issues" title="Permalink to this headline">¶</a></h2>
+<h2>Device specific questions and issues<a class="headerlink" href="#device-specific-questions-and-issues" title="Link to this heading">¶</a></h2>
 <section id="q-what-devices-are-supported-by-dpc-compiler">
-<h3>Q: What devices are supported by DPC++ compiler?<a class="headerlink" href="#q-what-devices-are-supported-by-dpc-compiler" title="Permalink to this headline">¶</a></h3>
+<h3>Q: What devices are supported by DPC++ compiler?<a class="headerlink" href="#q-what-devices-are-supported-by-dpc-compiler" title="Link to this heading">¶</a></h3>
 <p><strong>A:</strong> By design, DPC++ and SYCL are closely connected to OpenCL, which is used
 to offload code to specialized devices. DPC++ compiler currently makes use of
 SPIR-V, a portable intermediate representation format. It is a core feature of
 OpenCL 2.1, so any device, capable of OpenCL 2.1, should be supported.
 Otherwise, your OpenCL device must support <code class="docutils literal notranslate"><span class="pre">cl_khr_il_program</span></code> extension.</p>
-<p>Apart from that, there’s also the so-called host device, which can be used when
-no suitable OpenCL device is found. The host device will use your host CPU as
-the offload target for kernel execution. Since the device code is also compiled
-for the host CPU and no JIT is required, you can easily use any classic C++
-debugging tools of your choice for the host device code.</p>
 <p>Furthermore, developers can extend capabilities of the DPC++ Runtime to
 non-OpenCL devices by writing correspondent plugins. To learn more, please
-check out our <a class="reference internal" href="design/PluginInterface.html"><span class="doc std std-doc">Plugin Interface Guide</span></a>.</p>
+check out our <a class="reference internal" href="design/PluginInterface.html"><span class="std std-doc">Plugin Interface Guide</span></a>.</p>
 </section>
 <section id="q-dpc-applications-hang-on-intel-gpus-while-working-well-on-other-devices">
-<h3>Q: DPC++ applications hang on Intel GPUs while working well on other devices<a class="headerlink" href="#q-dpc-applications-hang-on-intel-gpus-while-working-well-on-other-devices" title="Permalink to this headline">¶</a></h3>
+<h3>Q: DPC++ applications hang on Intel GPUs while working well on other devices<a class="headerlink" href="#q-dpc-applications-hang-on-intel-gpus-while-working-well-on-other-devices" title="Link to this heading">¶</a></h3>
 <p><strong>A:</strong> One of the common reasons is Intel GPUs feature called “hang check”.
 If your workload runs for more than a certain amount of time, it will be killed
 by hardware. From the application point of view this looks like a hang. To
@@ -205,7 +193,7 @@ to real hangs.</strong></p>
       <div class="bottomnav" role="navigation" aria-label="bottom navigation">
       
         <p>
-        «&#160;&#160;<a href="cuda/opencl-subgroup-vs-cuda-crosslane-op.html">CUDA crosslane vs OpenCL sub-groups</a>
+        «&#160;&#160;<a href="syclcompat/README.html">SYCLcompat</a>
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
@@ -215,8 +203,8 @@ to real hangs.</strong></p>
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2022, Intel Corporation.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1merged__properties_3_01properti5cceb6d7a0c2bc40ef9969d368a8c060 =
+[
+    [ "type", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1merged__properties_3_01properti5cceb6d7a0c2bc40ef9969d368a8c060.html#a7ea9853e43b152f3b8a5436d982147cf", null ]
+];

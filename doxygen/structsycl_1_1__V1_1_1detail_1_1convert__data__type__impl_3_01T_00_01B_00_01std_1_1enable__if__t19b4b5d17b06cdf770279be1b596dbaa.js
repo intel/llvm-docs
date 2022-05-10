@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1convert__data__type__impl_3_01T_00_01B_00_01std_1_1enable__if__t19b4b5d17b06cdf770279be1b596dbaa =
+[
+    [ "operator()", "structsycl_1_1__V1_1_1detail_1_1convert__data__type__impl_3_01T_00_01B_00_01std_1_1enable__if__t19b4b5d17b06cdf770279be1b596dbaa.html#a6b8b201b9caa7578a217e33efc8042c0", null ]
+];
