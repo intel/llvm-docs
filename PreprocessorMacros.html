@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Preprocessor Macros &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=dfa0e015" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CUDA backend for DPC++" href="cuda/contents.html" />
+    <link rel="prev" title="Users Manual" href="UsersManual.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Preprocessor Macros</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="UsersManual.html">Users Manual</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="cuda/contents.html">CUDA backend for DPC++</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="preprocessor-macros">
+<h1>Preprocessor Macros<a class="headerlink" href="#preprocessor-macros" title="Link to this heading">¶</a></h1>
+<p>This file describes macros that have effect on SYCL compiler and run-time.</p>
+<ul>
+<li><p><strong>RESTRICT_WRITE_ACCESS_TO_CONSTANT_PTR</strong></p>
+<p>The spec assumes that the SYCL implementation does address space deduction.
+However, for our implementation, the deduction is performed in the middle end,
+where it’s hard to provide user friendly diagnositcs.
+Due to these problems writing to raw pointers obtained from <code class="docutils literal notranslate"><span class="pre">constant_ptr</span></code> is
+not diagnosed now.
+The user can enable diagnostics upon writing to such pointers via enabling the
+<code class="docutils literal notranslate"><span class="pre">RESTRICT_WRITE_ACCESS_TO_CONSTANT_PTR</span></code> macro.
+This allows <code class="docutils literal notranslate"><span class="pre">constant_ptr</span></code> to use constant pointers as underlying
+pointer types. Thus, conversions from <code class="docutils literal notranslate"><span class="pre">constant_ptr</span></code> to raw pointers will return
+constant pointers and writing to const pointers will be diagnosed by the
+front-end.
+This behavior is not following the SYCL spec since <code class="docutils literal notranslate"><span class="pre">constant_ptr</span></code> conversions to
+the underlying pointer types return pointers without any additional qualifiers
+so it’s disabled by default.</p>
+</li>
+<li><p><strong>SYCL2020_DISABLE_DEPRECATION_WARNINGS</strong></p>
+<p>Disables warnings coming from usage of SYCL 1.2.1 APIs, that are deprecated in
+SYCL 2020.</p>
+</li>
+<li><p><strong>SYCL_DISABLE_DEPRECATION_WARNINGS</strong></p>
+<p>Disables all deprecation warnings in SYCL runtime headers, including SYCL
+1.2.1 deprecations.</p>
+</li>
+<li><p><strong>SYCL_DISABLE_IMAGE_ASPECT_WARNING</strong></p>
+<p>Disables warning diagnostic issued when calling <code class="docutils literal notranslate"><span class="pre">device::has(aspect::image)</span></code>
+and <code class="docutils literal notranslate"><span class="pre">platform::has(aspect::image)</span></code>.</p>
+</li>
+<li><p><strong>SYCL_FALLBACK_ASSERT</strong></p>
+<p>Defining as non-zero enables the fallback assert feature even on devices
+without native support. Be aware that this will add some overhead that is
+associated with submitting kernels that call <code class="docutils literal notranslate"><span class="pre">assert()</span></code>. When this macro is
+defined as 0 or is not defined, the logic for detecting assertion failures in kernels is
+disabled, so a failed assert will not cause a message to be printed and will
+not cause the program to abort. Some devices have native support for
+assertions. The logic for detecting assertion failures is always enabled on
+these devices regardless of whether this macro is defined because that logic
+does not add any extra overhead. One can check to see if a device has native
+support for <code class="docutils literal notranslate"><span class="pre">assert()</span></code> via <code class="docutils literal notranslate"><span class="pre">aspect::ext_oneapi_native_assert</span></code>.
+This macro is undefined by default.</p>
+</li>
+<li><p><strong>SYCL2020_CONFORMANT_APIS (deprecated)</strong>
+This macro is used to comply with the SYCL 2020 specification, as some of the current
+implementations may be widespread and not conform to it.
+Defining this macro currently has no effect on the API.
+This preprocessor macro has been deprecated in favor of the
+<code class="docutils literal notranslate"><span class="pre">-fpreview-breaking-changes</span></code> compiler option.</p></li>
+</ul>
+<section id="version-macros">
+<h2>Version macros<a class="headerlink" href="#version-macros" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">__LIBSYCL_MAJOR_VERSION</span></code> is set to SYCL runtime library major version.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__LIBSYCL_MINOR_VERSION</span></code> is set to SYCL runtime library minor version.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__LIBSYCL_PATCH_VERSION</span></code> is set to SYCL runtime library patch version.</p></li>
+</ul>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="UsersManual.html">Users Manual</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="cuda/contents.html">CUDA backend for DPC++</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Frequently Asked Questions &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=dfa0e015" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Environment Variables" href="EnvironmentVariables.html" />
+    <link rel="prev" title="SYCLcompat" href="syclcompat/README.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Frequently Asked Questions</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="syclcompat/README.html">SYCLcompat</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="EnvironmentVariables.html">Environment Variables</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="frequently-asked-questions">
+<h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Link to this heading">¶</a></h1>
+<p><strong>Table of contents</strong></p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#developing-with-dpc">Developing with DPC++</a></p></li>
+<li><p><a class="reference internal" href="#using-applications-built-with-dpc">Using applications built with DPC++</a></p></li>
+<li><p><a class="reference internal" href="#common-issues">Common issues</a></p></li>
+<li><p><a class="reference internal" href="#device-specific-questions-and-issues">Device specific questions and issues</a></p></li>
+</ol>
+<section id="developing-with-dpc">
+<h2>Developing with DPC++<a class="headerlink" href="#developing-with-dpc" title="Link to this heading">¶</a></h2>
+<section id="q-what-do-i-need-to-start-developing-with-dpc">
+<h3>Q: What do I need to start developing with DPC++?<a class="headerlink" href="#q-what-do-i-need-to-start-developing-with-dpc" title="Link to this heading">¶</a></h3>
+<p><strong>A:</strong> To get the full DPC++ experience you need oneAPI DPC++ compiler. DPC++
+compiler provides you with both host and device side compilation. Another
+requirement for code offloading to specialized devices is a compatible OpenCL
+runtime. Our <a class="reference internal" href="GetStartedGuide.html"><span class="std std-doc">Get Started Guide</span></a> will help you
+set up a proper environment. To learn more about using the DPC++ compiler,
+please refer to <a class="reference internal" href="UsersManual.html"><span class="std std-doc">Users Manual</span></a>.</p>
+</section>
+<section id="q-how-are-dpc-compilation-phases-different-from-those-of-a-usual-c-compiler-can-i-customize-this-flow-for-my-applications">
+<h3>Q: How are DPC++ compilation phases different from those of a usual C++ compiler? Can I customize this flow for my applications?<a class="headerlink" href="#q-how-are-dpc-compilation-phases-different-from-those-of-a-usual-c-compiler-can-i-customize-this-flow-for-my-applications" title="Link to this heading">¶</a></h3>
+<p><strong>A:</strong> Due to the fact that both host and device code need to be compiled and
+linked into the final binary, the compilation steps sequence is more
+complicated compared to the usual C++ flow.</p>
+<p>In general, we encourage our users to rely on the DPC++ Compiler for
+handling all of the compilation phases “under the hood”. However,
+certain use-cases may involve third-party compiler usage for host-side
+compilation. The DPC++ compiler provides the
+<code class="docutils literal notranslate"><span class="pre">-fsycl-host-compiler=&lt;compiler_name&gt;</span></code> option, which allows one to
+specify the desired third-party compiler name. Usage example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clang</span><span class="o">++</span> <span class="o">-</span><span class="n">fsycl</span> <span class="o">-</span><span class="n">fsycl</span><span class="o">-</span><span class="n">host</span><span class="o">-</span><span class="n">compiler</span><span class="o">=</span><span class="n">g</span><span class="o">++</span>
+<span class="o">-</span><span class="n">fsycl</span><span class="o">-</span><span class="n">host</span><span class="o">-</span><span class="n">compiler</span><span class="o">-</span><span class="n">options</span><span class="o">=</span><span class="s2">&quot;-g&quot;</span> <span class="n">test</span><span class="o">.</span><span class="n">cpp</span>
+</pre></div>
+</div>
+<p>Implicitly, the above command would:</p>
+<ol class="arabic simple">
+<li><p>turn to the DPC++ compiler for compiling the device code for the
+needed target(s) and generating dependencies (“integration files”) for
+the host side;</p></li>
+<li><p>detect your preferred host compiler (<code class="docutils literal notranslate"><span class="pre">g++</span></code>, in this case), then use
+it to compile your host code and the dependency files from 1) into
+host object file(s);</p></li>
+<li><p>link the device image(s) from 1) and the host object(s) from 2)
+into the final executable.</p></li>
+</ol>
+<p>To learn more about the compiler options mentioned, and the DPC++
+compiler command-line interface in general, please refer to the
+<a class="reference internal" href="UsersManual.html"><span class="std std-doc">DPC++ Compiler User Manual</span></a>.
+To learn more about the concepts behind this flow, and the DPC++
+Compiler internals as such, we welcome you to study our
+<a class="reference internal" href="design/CompilerAndRuntimeDesign.html"><span class="std std-doc">DPC++ Compiler and Runtime architecture design</span></a> document.</p>
+</section>
+</section>
+<section id="using-applications-built-with-dpc">
+<h2>Using applications built with DPC++<a class="headerlink" href="#using-applications-built-with-dpc" title="Link to this heading">¶</a></h2>
+<section id="q-what-happens-if-i-run-my-sycl-application-on-a-machine-without-a-supported-backend">
+<h3>Q: What happens if I run my SYCL application on a machine without a supported backend?<a class="headerlink" href="#q-what-happens-if-i-run-my-sycl-application-on-a-machine-without-a-supported-backend" title="Link to this heading">¶</a></h3>
+<p><strong>A:</strong> If a SYCL application is unable to find a suitable device, the SYCL
+objects (<code class="docutils literal notranslate"><span class="pre">sycl::context</span></code>, <code class="docutils literal notranslate"><span class="pre">sycl::queue</span></code>, etc.) or the SYCL device selector (See
+<a class="reference external" href="https://registry.khronos.org/SYCL/specs/sycl-2020/html/sycl-2020.html#sec:device-selection">SYCL 2020 specificaion 4.6.1.1</a>)
+will throw a <code class="docutils literal notranslate"><span class="pre">sycl::exception</span></code> with <code class="docutils literal notranslate"><span class="pre">errc::runtime</span></code> error code.</p>
+</section>
+</section>
+<section id="common-issues">
+<h2>Common issues<a class="headerlink" href="#common-issues" title="Link to this heading">¶</a></h2>
+<section id="q-dpc-application-complains-about-missing-libsycl-so-or-sycl-dll-library">
+<h3>Q: DPC++ application complains about missing libsycl.so (or sycl.dll) library.<a class="headerlink" href="#q-dpc-application-complains-about-missing-libsycl-so-or-sycl-dll-library" title="Link to this heading">¶</a></h3>
+<p>Linux:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./app
+$ ./app: error while loading shared libraries: libsycl.so: cannot open shared object file: No such file or directory
+</pre></div>
+</div>
+<p>Windows:</p>
+<p><img alt="Error screen" src="_images/missing_sycl_dll.png" /></p>
+<p><em>The code execution cannot proceed because sycl.dll was not found. Reinstalling
+the program may fix this problem.</em></p>
+<p><strong>A:</strong> The DPC++ Runtime library is required to run DPC++ applications.
+While compiler driver is able to find the library and link against it, your
+operating system may struggle. Make sure that the location of the DPC++ Runtime
+library is listed in the correct environment variable: <code class="docutils literal notranslate"><span class="pre">LD_LIBRARY_PATH</span></code>
+(for Linux) or <code class="docutils literal notranslate"><span class="pre">LIB</span></code> (for Windows).</p>
+</section>
+<section id="q-dpc-compiler-fails-to-compile-device-code-that-uses-std-functions">
+<h3>Q: DPC++ Compiler fails to compile device code that uses STD functions.<a class="headerlink" href="#q-dpc-compiler-fails-to-compile-device-code-that-uses-std-functions" title="Link to this heading">¶</a></h3>
+<p>Example error message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>In file included from example.cpp:1:
+In file included from C:\compiler\lib\clang\10.0.0\include\sycl/sycl.hpp:11:
+In file included from C:\compiler\lib\clang\10.0.0\include\sycl/accessor.hpp:13:
+In file included from C:\compiler\lib\clang\10.0.0\include\sycl/buffer.hpp:10:
+In file included from C:\compiler\lib\clang\10.0.0\include\sycl/detail/buffer_impl.hpp:14:
+In file included from C:\compiler\lib\clang\10.0.0\include\sycl/detail/aligned_allocator.hpp:16:
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.22.27905\include\algorithm(4493,9): error: SYCL kernel cannot call a
+      dllimport function
+        _STL_ASSERT(!(_Left &lt; _Right), &quot;invalid comparator&quot;);
+        ^
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.22.27905\include\yvals.h(193,33): note: expanded from macro &#39;_STL_ASSERT&#39;
+#define _STL_ASSERT(cond, mesg) _STL_VERIFY(cond, mesg)
+                                ^
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.22.27905\include\yvals.h(186,13): note: expanded from macro &#39;_STL_VERIFY&#39;
+            _STL_REPORT_ERROR(mesg);                                \
+            ^
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.22.27905\include\yvals.h(178,9): note: expanded from macro
+      &#39;_STL_REPORT_ERROR&#39;
+        _RPTF0(_CRT_ASSERT, mesg);           \
+        ^
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\crtdbg.h(760,37): note: expanded from macro &#39;_RPTF0&#39;
+    #define _RPTF0(rptno, msg)      _RPT_BASE(rptno, __FILE__, __LINE__, NULL, &quot;%s&quot;, msg)
+                                    ^
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\crtdbg.h(747,23): note: expanded from macro &#39;_RPT_BASE&#39;
+        (void) ((1 != _CrtDbgReport(__VA_ARGS__)) || \
+                      ^
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\crtdbg.h(607,26): note: &#39;_CrtDbgReport&#39; declared here
+    _ACRTIMP int __cdecl _CrtDbgReport(
+</pre></div>
+</div>
+<p><strong>A:</strong> Section 6.3 of the SYCL specification says:</p>
+<blockquote>
+<div><p>Implementations are not required to support any library routines in kernels
+beyond those explicitly mentioned as usable in kernels in this spec.</p>
+</div></blockquote>
+<p>Replace usage of STD built-ins with SYCL-defined math built-ins. Please, note
+that you have to explicitly specify built-in namespace (i.e. <code class="docutils literal notranslate"><span class="pre">sycl::fmin</span></code>).
+The full list of SYCL math built-ins is provided in section 4.13.3 of the
+specification.</p>
+</section>
+</section>
+<section id="device-specific-questions-and-issues">
+<h2>Device specific questions and issues<a class="headerlink" href="#device-specific-questions-and-issues" title="Link to this heading">¶</a></h2>
+<section id="q-what-devices-are-supported-by-dpc-compiler">
+<h3>Q: What devices are supported by DPC++ compiler?<a class="headerlink" href="#q-what-devices-are-supported-by-dpc-compiler" title="Link to this heading">¶</a></h3>
+<p><strong>A:</strong> By design, DPC++ and SYCL are closely connected to OpenCL, which is used
+to offload code to specialized devices. DPC++ compiler currently makes use of
+SPIR-V, a portable intermediate representation format. It is a core feature of
+OpenCL 2.1, so any device, capable of OpenCL 2.1, should be supported.
+Otherwise, your OpenCL device must support <code class="docutils literal notranslate"><span class="pre">cl_khr_il_program</span></code> extension.</p>
+<p>Furthermore, developers can extend capabilities of the DPC++ Runtime to
+non-OpenCL devices by writing correspondent plugins. To learn more, please
+check out our <a class="reference internal" href="design/PluginInterface.html"><span class="std std-doc">Plugin Interface Guide</span></a>.</p>
+</section>
+<section id="q-dpc-applications-hang-on-intel-gpus-while-working-well-on-other-devices">
+<h3>Q: DPC++ applications hang on Intel GPUs while working well on other devices<a class="headerlink" href="#q-dpc-applications-hang-on-intel-gpus-while-working-well-on-other-devices" title="Link to this heading">¶</a></h3>
+<p><strong>A:</strong> One of the common reasons is Intel GPUs feature called “hang check”.
+If your workload runs for more than a certain amount of time, it will be killed
+by hardware. From the application point of view this looks like a hang. To
+allow heavy kernels to be executed, disable hang check. <strong>Please, note that
+other apps on your system may contain bugs, and disabling “hang check” may lead
+to real hangs.</strong></p>
+<p>You can find out more about hang check and how to disable it on
+<a class="reference external" href="https://software.intel.com/en-us/articles/installation-guide-for-intel-oneapi-toolkits">this page</a>.</p>
+</section>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="syclcompat/README.html">SYCLcompat</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="EnvironmentVariables.html">Environment Variables</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>
